@@ -165,3 +165,21 @@
 2019-12-05 09:18:14,104 create_features.base line 89 [DEBUG][save] save path=../../data/feature/MyFeat1_test.pkl
 2019-12-05 09:18:14,104 create_features.base line 90 [INFO][save] finish MyFeat1
 2019-12-05 09:18:14,104 create_features line 53 [INFO][<module>] -------------------- end
+2019-12-05 10:07:52,594 create_features line 42 [DEBUG][<module>] this is debugggg
+2019-12-05 10:07:52,594 create_features line 45 [INFO][<module>] -------------------- start
+2019-12-05 10:07:52,607 create_features.base line 88 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-05 10:07:52,607 create_features.base line 89 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-05 10:07:52,607 create_features.base line 90 [INFO][save] finish FamilySize
+2019-12-05 10:07:52,610 create_features.base line 88 [DEBUG][save] save path=../../data/feature/MyFeat1_train.pkl
+2019-12-05 10:07:52,610 create_features.base line 89 [DEBUG][save] save path=../../data/feature/MyFeat1_test.pkl
+2019-12-05 10:07:52,611 create_features.base line 90 [INFO][save] finish MyFeat1
+2019-12-05 10:07:52,611 create_features line 55 [INFO][<module>] -------------------- end
+2019-12-05 10:08:02,892 create_features line 42 [DEBUG][<module>] this is debugggg
+2019-12-05 10:08:02,892 create_features line 45 [INFO][<module>] -------------------- start
+2019-12-05 10:08:02,902 create_features.base line 88 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-05 10:08:02,902 create_features.base line 89 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-05 10:08:02,902 create_features.base line 90 [INFO][save] finish FamilySize
+2019-12-05 10:08:02,906 create_features.base line 88 [DEBUG][save] save path=../../data/feature/MyFeat1_train.pkl
+2019-12-05 10:08:02,906 create_features.base line 89 [DEBUG][save] save path=../../data/feature/MyFeat1_test.pkl
+2019-12-05 10:08:02,906 create_features.base line 90 [INFO][save] finish MyFeat1
+2019-12-05 10:08:02,906 create_features line 55 [INFO][<module>] -------------------- end

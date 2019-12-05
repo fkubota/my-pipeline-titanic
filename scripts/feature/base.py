@@ -11,7 +11,7 @@ import logging
 # logger
 # logger = logging.getLogger(__name__)
 logger = logging.getLogger('create_features').getChild('base')
-logger.setLevel('DEBUG')
+# logger.setLevel('DEBUG')
 # formatter = logging.Formatter('%(asctime)s %(name)s line %(lineno)d [%(levelname)s][%(funcName)s] %(message)s')
 
 # 標準出力
