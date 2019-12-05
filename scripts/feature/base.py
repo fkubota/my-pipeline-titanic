@@ -65,10 +65,10 @@ class Feature(metaclass=ABCMeta):
         logger.info(f' ===== finish {self.name} =====')
 
 
-def get_features(namespace):
-    for k, v in namespace.items():
-        if inspect.isclass(v) and issubclass(v, Feature) and not inspect.isabstract(v):
-            yield v()
+#def get_features(namespace):
+#    for k, v in namespace.items():
+#        if inspect.isclass(v) and issubclass(v, Feature) and not inspect.isabstract(v):
+#            yield v()
 
 
 
