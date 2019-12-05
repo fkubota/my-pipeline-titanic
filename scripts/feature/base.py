@@ -9,24 +9,8 @@ import inspect
 import logging
 
 # logger
-# logger = logging.getLogger(__name__)
-logger = logging.getLogger('create_features').getChild('base')
-# logger.setLevel('DEBUG')
-# formatter = logging.Formatter('%(asctime)s %(name)s line %(lineno)d [%(levelname)s][%(funcName)s] %(message)s')
-
-# 標準出力
-# sh = logging.StreamHandler()
-# sh.setLevel('INFO')
-# sh.setFormatter(formatter)
-# logger.addHandler(sh)
-# 
-# # ファイル出力
-# fh = logging.FileHandler(f'{LOG_DIR}/log.log')
-# fh.setLevel('DEBUG')
-# fh.setFormatter(formatter)
-# logger.addHandler(fh)
-
-
+logger = logging.getLogger('base')
+logger.setLevel(logging.DEBUG)
 
 
 def get_arguments():
@@ -87,7 +71,9 @@ class Feature(metaclass=ABCMeta):
         # self.test.to_feather(str(self.test_path))
         logger.debug(f'save path={self.train_path}')
         logger.debug(f'save path={self.test_path}')
-        logger.info(f'finish {self.name}')
+        logger.debug(f'train feat size={self.train.shape}')
+        logger.debug(f'test  feat size={self.test.shape}')
+        logger.info(f' ===== finish {self.name} =====')
 
 
 def get_features(namespace):
