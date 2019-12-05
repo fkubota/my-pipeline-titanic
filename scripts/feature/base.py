@@ -33,14 +33,6 @@ def generate_features(namespace, overwrite):
         else:
             f.run().save()
 
-@contextmanager
-def timer(name):
-    t0 = time.time()
-    # print(f'[{name}] start')
-    yield
-    # print(f'[{name}] done in {time.time() - t0:.0f} s')
-
-
 class Feature(metaclass=ABCMeta):
     prefix = ''
     suffix = ''
@@ -54,12 +46,11 @@ class Feature(metaclass=ABCMeta):
         self.test_path = Path(self.dir) / f'{self.name}_test.pkl'
     
     def run(self):
-        with timer(self.name):
-            self.create_features()
-            prefix = self.prefix + '_' if self.prefix else ''
-            suffix = '_' + self.suffix if self.suffix else ''
-            self.train.columns = prefix + self.train.columns + suffix
-            self.test.columns = prefix + self.test.columns + suffix
+        self.create_features()
+        prefix = self.prefix + '_' if self.prefix else ''
+        suffix = '_' + self.suffix if self.suffix else ''
+        self.train.columns = prefix + self.train.columns + suffix
+        self.test.columns = prefix + self.test.columns + suffix
         return self
     
     @abstractmethod
@@ -67,8 +58,6 @@ class Feature(metaclass=ABCMeta):
         raise NotImplementedError
     
     def save(self):
-        # self.train.to_feather(str(self.train_path))
-        # self.test.to_feather(str(self.test_path))
         logger.debug(f'save path={self.train_path}')
         logger.debug(f'save path={self.test_path}')
         logger.debug(f'train feat size={self.train.shape}')
