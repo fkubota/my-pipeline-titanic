@@ -9,17 +9,19 @@ Feature.dir = './../../data/feature'
 
 class FamilySize(Feature):
     def create_features(self):
-        self.train['family_size'] = train['SibSp'] + train['Parch'] + 1
-        self.test['family_size'] = test['SibSp'] + test['Parch'] + 1
+        self.feat_train['family_size'] = train['SibSp'] + train['Parch'] + 1
+        self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
+
 
 class MyFeat1(Feature):
     def create_features(self):
-        self.train['family_size'] = train['SibSp'] + train['Parch'] + 1
-        self.test['family_size'] = test['SibSp'] + test['Parch'] + 1
+        self.feat_train['family_size'] = train['SibSp'] + train['Parch'] + 1
+        self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
 
 
 if __name__ == '__main__':
-    formatter = logging.Formatter('%(asctime)s %(name)s line %(lineno)d [%(levelname)s][%(funcName)s] %(message)s') # logger.setLevel('DEBUG')
+    form = '%(asctime)s %(name)s line %(lineno)d [%(levelname)s][%(funcName)s] %(message)s'
+    formatter = logging.Formatter(form)
 
     logger = logging.getLogger('create_features')
     logger.setLevel(logging.DEBUG)
@@ -41,13 +43,13 @@ if __name__ == '__main__':
     logger.addHandler(fh)
     base_logger.addHandler(sh)
     base_logger.addHandler(fh)
-    
+
     # do
     logger.info('-------------------- start')
     args = get_arguments()
 
     train = pd.read_csv('~/Git/my-pipeline-titanic/data/input/train.csv')
-    test  = pd.read_csv('~/Git/my-pipeline-titanic/data/input/test.csv')
+    test = pd.read_csv('~/Git/my-pipeline-titanic/data/input/test.csv')
     generate_features(globals(), args.force)
 
     logger.info('-------------------- end')

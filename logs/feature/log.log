@@ -611,3 +611,228 @@
 2019-12-05 13:58:39,179 base line 64 [DEBUG][save] test  feat size=(418, 1)
 2019-12-05 13:58:39,179 base line 65 [INFO][save]  ===== finish MyFeat1 =====
 2019-12-05 13:58:39,179 create_features line 53 [INFO][<module>] -------------------- end
+2019-12-06 09:01:47,780 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:02:02,418 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:02:15,662 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:02:38,582 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:02:38,609 base line 63 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:02:38,609 base line 64 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:02:38,609 base line 65 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:02:38,610 base line 66 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:02:38,610 base line 67 [INFO][save]  ===== finish FamilySize =====
+2019-12-06 09:03:19,236 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:04:16,225 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:04:21,667 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:04:44,835 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:04:44,845 base line 63 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:04:44,846 base line 64 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:04:44,846 base line 65 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:04:44,846 base line 66 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:04:44,846 base line 67 [INFO][save]  ===== finish FamilySize =====
+2019-12-06 09:04:52,238 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:04:52,249 base line 63 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:04:52,249 base line 64 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:04:52,250 base line 65 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:04:52,250 base line 66 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:04:52,250 base line 67 [INFO][save]  ===== finish FamilySize =====
+2019-12-06 09:05:02,939 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:05:02,950 base line 63 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:05:02,950 base line 64 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:05:02,950 base line 65 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:05:02,950 base line 66 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:05:02,950 base line 67 [INFO][save]  ===== finish FamilySize =====
+2019-12-06 09:05:02,954 base line 63 [DEBUG][save] save path=../../data/feature/MyFeat1_train.pkl
+2019-12-06 09:05:02,954 base line 64 [DEBUG][save] save path=../../data/feature/MyFeat1_test.pkl
+2019-12-06 09:05:02,954 base line 65 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:05:02,954 base line 66 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:05:02,954 base line 67 [INFO][save]  ===== finish MyFeat1 =====
+2019-12-06 09:05:02,954 create_features line 55 [INFO][<module>] -------------------- end
+2019-12-06 09:06:23,146 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:06:23,157 base line 63 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:06:23,157 base line 64 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:06:37,466 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:06:37,476 base line 63 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:06:37,476 base line 64 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:06:53,112 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:06:53,124 base line 63 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:06:53,124 base line 64 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:07:21,958 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:07:21,970 base line 63 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:07:21,970 base line 64 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:07:21,970 base line 65 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:07:21,970 base line 66 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:07:21,974 base line 67 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:07:21,977 base line 68 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:07:21,977 base line 69 [INFO][save]  ===== finish FamilySize =====
+2019-12-06 09:07:21,980 base line 63 [DEBUG][save] save path=../../data/feature/MyFeat1_train.pkl
+2019-12-06 09:07:21,980 base line 64 [DEBUG][save] save path=../../data/feature/MyFeat1_test.pkl
+2019-12-06 09:07:21,980 base line 65 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:07:21,980 base line 66 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:07:21,982 base line 67 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:07:21,984 base line 68 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:07:21,984 base line 69 [INFO][save]  ===== finish MyFeat1 =====
+2019-12-06 09:07:21,984 create_features line 55 [INFO][<module>] -------------------- end
+2019-12-06 09:13:23,582 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:13:23,592 base line 67 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:13:23,592 base line 68 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:13:23,592 base line 69 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:13:23,592 base line 70 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:13:23,596 base line 71 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:13:23,598 base line 72 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:13:23,598 base line 73 [INFO][save]  ===== finish FamilySize =====
+2019-12-06 09:13:23,602 base line 67 [DEBUG][save] save path=../../data/feature/MyFeat1_train.pkl
+2019-12-06 09:13:23,602 base line 68 [DEBUG][save] save path=../../data/feature/MyFeat1_test.pkl
+2019-12-06 09:13:23,602 base line 69 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:13:23,602 base line 70 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:13:23,604 base line 71 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:13:23,605 base line 72 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:13:23,605 base line 73 [INFO][save]  ===== finish MyFeat1 =====
+2019-12-06 09:13:23,606 create_features line 55 [INFO][<module>] -------------------- end
+2019-12-06 09:13:29,034 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:13:29,045 base line 67 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:13:29,045 base line 68 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:13:29,045 base line 69 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:13:29,045 base line 70 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:13:29,048 base line 71 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:13:29,050 base line 72 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:13:29,050 base line 73 [INFO][save]  ===== finish FamilySize =====
+2019-12-06 09:13:29,053 base line 67 [DEBUG][save] save path=../../data/feature/MyFeat1_train.pkl
+2019-12-06 09:13:29,053 base line 68 [DEBUG][save] save path=../../data/feature/MyFeat1_test.pkl
+2019-12-06 09:13:29,054 base line 69 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:13:29,054 base line 70 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:13:29,056 base line 71 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:13:29,057 base line 72 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:13:29,057 base line 73 [INFO][save]  ===== finish MyFeat1 =====
+2019-12-06 09:13:29,057 create_features line 55 [INFO][<module>] -------------------- end
+2019-12-06 09:13:37,297 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:13:37,308 base line 67 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:13:37,308 base line 68 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:13:37,308 base line 69 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:13:37,308 base line 70 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:13:37,312 base line 71 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:13:37,314 base line 72 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:13:37,314 base line 73 [INFO][save]  ===== finish FamilySize =====
+2019-12-06 09:13:37,317 base line 67 [DEBUG][save] save path=../../data/feature/MyFeat1_train.pkl
+2019-12-06 09:13:37,317 base line 68 [DEBUG][save] save path=../../data/feature/MyFeat1_test.pkl
+2019-12-06 09:13:37,318 base line 69 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:13:37,318 base line 70 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:13:37,320 base line 71 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:13:37,321 base line 72 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:13:37,321 base line 73 [INFO][save]  ===== finish MyFeat1 =====
+2019-12-06 09:13:37,322 create_features line 55 [INFO][<module>] -------------------- end
+2019-12-06 09:13:40,802 create_features line 48 [INFO][<module>] -------------------- start
+2019-12-06 09:13:40,813 base line 67 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-06 09:13:40,813 base line 68 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-06 09:13:40,813 base line 69 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:13:40,813 base line 70 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:13:40,816 base line 71 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:13:40,818 base line 72 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:13:40,818 base line 73 [INFO][save]  ===== finish FamilySize =====
+2019-12-06 09:13:40,822 base line 67 [DEBUG][save] save path=../../data/feature/MyFeat1_train.pkl
+2019-12-06 09:13:40,822 base line 68 [DEBUG][save] save path=../../data/feature/MyFeat1_test.pkl
+2019-12-06 09:13:40,822 base line 69 [DEBUG][save] train feat size=(891, 1)
+2019-12-06 09:13:40,822 base line 70 [DEBUG][save] test  feat size=(418, 1)
+2019-12-06 09:13:40,824 base line 71 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-06 09:13:40,826 base line 72 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-06 09:13:40,826 base line 73 [INFO][save]  ===== finish MyFeat1 =====
+2019-12-06 09:13:40,826 create_features line 55 [INFO][<module>] -------------------- end
