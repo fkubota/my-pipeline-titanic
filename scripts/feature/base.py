@@ -78,4 +78,3 @@ class Feature(metaclass=ABCMeta):
         logger.debug(f'train {self.feat_train.head()}')
         logger.debug(f'test {self.feat_test.head()}')
         logger.info(f' ===== finish {self.name} =====')
-
