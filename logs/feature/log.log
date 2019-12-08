@@ -2429,3 +2429,329 @@
 4   Mrs
 2019-12-09 08:03:23,810 base line 144 [INFO][save]  ===== finish Title =====
 2019-12-09 08:03:23,810 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-09 08:11:06,635 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:13:04,902 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:13:04,903 base line 44 [INFO][generate_features] skip FamilySize
+2019-12-09 08:13:04,903 base line 44 [INFO][generate_features] skip Title
+2019-12-09 08:13:04,903 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-09 08:13:10,340 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:13:10,341 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:13:10,354 base line 100 [DEBUG][create_memo] none
+2019-12-09 08:13:10,359 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-09 08:13:10,359 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-09 08:13:10,359 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:13:10,359 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:13:10,362 base line 142 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-09 08:13:10,364 base line 143 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-09 08:13:10,364 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-09 08:14:20,851 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:14:20,852 base line 44 [INFO][generate_features] skip FamilySize
+2019-12-09 08:14:20,853 base line 44 [INFO][generate_features] skip Title
+2019-12-09 08:14:20,853 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-09 08:14:25,823 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:14:25,824 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:14:25,827 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:14:25,828 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:14:25,839 base line 123 [INFO][create_memo] memo: n_person in family
+2019-12-09 08:14:25,844 base line 124 [DEBUG][create_memo] _memo.csv:                         date   feat_name                memo
+0 2019-12-09 08:14:25.824092  FamilySize  n_person in family
+2019-12-09 08:14:25,846 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-09 08:14:25,846 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-09 08:14:25,846 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:14:25,846 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:14:25,848 base line 142 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-09 08:14:25,850 base line 143 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-09 08:14:25,850 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-09 08:14:25,850 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:14:25,855 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:14:25,856 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:14:25,858 base line 123 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-09 08:14:25,862 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+0  2019-12-09 08:14:25.824092  FamilySize  n_person in family
+0  2019-12-09 08:14:25.850350       Title    敬称(Ms, Masterとか)
+2019-12-09 08:14:25,864 base line 138 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-09 08:14:25,864 base line 139 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-09 08:14:25,864 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:14:25,864 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:14:25,870 base line 142 [DEBUG][save] train   Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-09 08:14:25,872 base line 143 [DEBUG][save] test   Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-09 08:14:25,873 base line 144 [INFO][save]  ===== finish Title =====
+2019-12-09 08:14:25,873 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-09 08:16:08,328 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:16:08,328 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:16:08,331 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:16:08,332 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:16:08,333 base line 123 [INFO][create_memo] memo: n_person in family
+2019-12-09 08:16:08,338 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:14:25.850350       Title    敬称(Ms, Masterとか)
+0  2019-12-09 08:16:08.328152  FamilySize  n_person in family
+2019-12-09 08:16:08,340 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-09 08:16:08,340 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-09 08:16:08,340 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:16:08,340 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:16:08,342 base line 142 [DEBUG][save] train    family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-09 08:16:08,344 base line 143 [DEBUG][save] test    family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-09 08:16:08,344 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-09 08:16:08,344 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:16:08,347 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:16:08,348 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:16:08,350 base line 123 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-09 08:16:08,353 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:16:08.328152  FamilySize  n_person in family
+0  2019-12-09 08:16:08.344507       Title    敬称(Ms, Masterとか)
+2019-12-09 08:16:08,355 base line 138 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-09 08:16:08,355 base line 139 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-09 08:16:08,355 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:16:08,355 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:16:08,358 base line 142 [DEBUG][save] train   Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-09 08:16:08,360 base line 143 [DEBUG][save] test   Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-09 08:16:08,361 base line 144 [INFO][save]  ===== finish Title =====
+2019-12-09 08:16:08,361 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-09 08:16:50,395 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:16:50,396 base line 44 [INFO][generate_features] skip FamilySize
+2019-12-09 08:16:50,396 base line 44 [INFO][generate_features] skip Title
+2019-12-09 08:16:50,396 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-09 08:16:54,166 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:16:54,167 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:16:54,170 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:16:54,171 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:16:54,173 base line 123 [INFO][create_memo] memo: n_person in family
+2019-12-09 08:16:54,177 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:16:08.344507       Title    敬称(Ms, Masterとか)
+0  2019-12-09 08:16:54.166826  FamilySize  n_person in family
+2019-12-09 08:16:54,179 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-09 08:16:54,180 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-09 08:16:54,180 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:16:54,180 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:16:54,182 base line 142 [DEBUG][save] train 
+   family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-09 08:16:54,184 base line 143 [DEBUG][save] test 
+   family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-09 08:16:54,184 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-09 08:16:54,184 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:16:54,187 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:16:54,188 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:16:54,190 base line 123 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-09 08:16:54,194 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:16:54.166826  FamilySize  n_person in family
+0  2019-12-09 08:16:54.184358       Title    敬称(Ms, Masterとか)
+2019-12-09 08:16:54,196 base line 138 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-09 08:16:54,196 base line 139 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-09 08:16:54,196 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:16:54,196 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:16:54,198 base line 142 [DEBUG][save] train 
+  Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-09 08:16:54,202 base line 143 [DEBUG][save] test 
+  Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-09 08:16:54,202 base line 144 [INFO][save]  ===== finish Title =====
+2019-12-09 08:16:54,202 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-09 08:17:20,471 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:17:20,472 base line 44 [INFO][generate_features] skip FamilySize
+2019-12-09 08:17:20,473 base line 44 [INFO][generate_features] skip Title
+2019-12-09 08:17:20,473 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-09 08:17:23,618 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:17:23,619 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:17:23,622 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:17:23,623 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:17:23,625 base line 123 [INFO][create_memo] memo: n_person in family
+2019-12-09 08:17:23,629 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:16:54.184358       Title    敬称(Ms, Masterとか)
+0  2019-12-09 08:17:23.618528  FamilySize  n_person in family
+2019-12-09 08:17:23,632 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-09 08:17:23,632 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-09 08:17:23,632 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:17:23,632 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:17:23,634 base line 142 [DEBUG][save] 
+train 
+   family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-09 08:17:23,636 base line 143 [DEBUG][save] 
+test 
+   family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-09 08:17:23,636 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-09 08:17:23,637 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:17:23,639 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:17:23,640 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:17:23,642 base line 123 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-09 08:17:23,647 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:17:23.618528  FamilySize  n_person in family
+0  2019-12-09 08:17:23.636562       Title    敬称(Ms, Masterとか)
+2019-12-09 08:17:23,649 base line 138 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-09 08:17:23,649 base line 139 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-09 08:17:23,649 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:17:23,649 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:17:23,652 base line 142 [DEBUG][save] 
+train 
+  Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-09 08:17:23,655 base line 143 [DEBUG][save] 
+test 
+  Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-09 08:17:23,655 base line 144 [INFO][save]  ===== finish Title =====
+2019-12-09 08:17:23,655 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-09 08:19:24,085 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:19:24,100 create_features line 82 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-09 08:19:24,110 create_features line 83 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-09 08:19:24,111 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:19:24,114 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:19:24,116 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:19:24,118 base line 123 [INFO][create_memo] memo: n_person in family
+2019-12-09 08:19:24,123 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:17:23.636562       Title    敬称(Ms, Masterとか)
+0  2019-12-09 08:19:24.110355  FamilySize  n_person in family
+2019-12-09 08:19:24,128 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-09 08:19:24,128 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-09 08:19:24,128 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:19:24,128 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:19:24,131 base line 142 [DEBUG][save] 
+train 
+   family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-09 08:19:24,134 base line 143 [DEBUG][save] 
+test 
+   family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-09 08:19:24,134 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-09 08:19:24,134 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:19:24,137 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:19:24,138 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:19:24,140 base line 123 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-09 08:19:24,145 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:19:24.110355  FamilySize  n_person in family
+0  2019-12-09 08:19:24.134263       Title    敬称(Ms, Masterとか)
+2019-12-09 08:19:24,148 base line 138 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-09 08:19:24,148 base line 139 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-09 08:19:24,148 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:19:24,148 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:19:24,152 base line 142 [DEBUG][save] 
+train 
+  Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-09 08:19:24,155 base line 143 [DEBUG][save] 
+test 
+  Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-09 08:19:24,155 base line 144 [INFO][save]  ===== finish Title =====
+2019-12-09 08:19:24,155 create_features line 85 [INFO][<module>] -------------------- end

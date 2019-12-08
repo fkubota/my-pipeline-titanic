@@ -58,7 +58,7 @@ class Feature(metaclass=ABCMeta):
         self.feat_test = pd.DataFrame()
         self.feat_train_path = Path(self.dir) / f'{self.name}_train.pkl'
         self.feat_test_path = Path(self.dir) / f'{self.name}_test.pkl'
-        self.basic_metas = np.array(['memo', 'type'])
+        self.basic_metas = np.array(['memo', 'num_or_cat'])
         self.meta_dict = {'date': self.now}
 
     def run(self, overwrite):
@@ -99,9 +99,9 @@ class Feature(metaclass=ABCMeta):
         else:
             logger.debug('none')
             df = pd.DataFrame()
-            df['date'] = self.now
             df['feat_name'] = [self.name]
             df['memo'] = [self.meta_dict['memo']]
+            df['date'] = self.now
             df.to_csv(MEMO_PATH, index=False, encoding='utf-8')
             return
 
@@ -139,6 +139,6 @@ class Feature(metaclass=ABCMeta):
         logger.debug(f'save path={self.feat_test_path}')
         logger.debug(f'train feat size={self.feat_train.shape}')
         logger.debug(f'test  feat size={self.feat_test.shape}')
-        logger.debug(f'train {self.feat_train.head()}')
-        logger.debug(f'test {self.feat_test.head()}')
+        logger.debug(f'\ntrain \n{self.feat_train.head()}')
+        logger.debug(f'\ntest \n{self.feat_test.head()}')
         logger.info(f' ===== finish {self.name} =====')

@@ -43,7 +43,7 @@ class FamilySize(Feature):
 
     def add_meta(self):
         self.meta_dict['memo'] = 'n_person in family'
-        self.meta_dict['type'] = 'int'
+        self.meta_dict['num_or_cat'] = 'num'
         self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(self.now)
 
 
@@ -56,7 +56,7 @@ class Title(Feature):
 
     def add_meta(self):
         self.meta_dict['memo'] = '敬称(Ms, Masterとか)'
-        self.meta_dict['type'] = 'caT'
+        self.meta_dict['num_or_cat'] = 'cat'
         self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(self.now)
 
 
@@ -79,5 +79,7 @@ if __name__ == '__main__':
         test = test[:LENGTH]
 
     logger.info('-------------------- start')
+    logger.debug(f'\n-train\n {train.head()}')
+    logger.debug(f'\n-test\n {test.head()}')
     generate_features(globals(), args.force, args.test)
     logger.info('-------------------- end')
