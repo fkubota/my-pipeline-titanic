@@ -1,5 +1,6 @@
 from abc import ABCMeta, abstractmethod
 import os
+import sys
 import datetime
 from pathlib import Path
 import pandas as pd
@@ -8,9 +9,9 @@ import argparse
 import inspect
 import logging
 import pickle
+sys.path.append('../../utils')
+from CONST import MEMO_PATH
 
-# params
-MEMO_PATH = './../../data/feature/_memo.csv'
 
 # logger
 logger = logging.getLogger('base')
@@ -128,6 +129,7 @@ class Feature(metaclass=ABCMeta):
             logger.info('not save feature')
             pass
         else:
+            data = 0
             with open(self.feat_train_path, mode='wb') as f:
                 pickle.dump(data, f)
             with open(self.feat_test_path, mode='wb') as f:

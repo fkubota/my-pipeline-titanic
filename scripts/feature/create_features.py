@@ -1,11 +1,12 @@
+import sys
 import pandas as pd
 import logging
 from base import Feature, get_arguments, generate_features
+sys.path.append('../../utils')
+from CONST import LOG_DIR, LENGTH
 
 # params
-LOG_DIR = './../../logs/feature'
 Feature.dir = './../../data/feature'
-LENGTH = 100
 
 
 def preparation_logger():
@@ -46,14 +47,16 @@ class FamilySize(Feature):
         self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(self.now)
 
 
-class MyFeat1(Feature):
+class Title(Feature):
     def create_features(self):
-        self.feat_train['family_size'] = train['SibSp'] + train['Parch'] + 1
-        self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
+        self.feat_train['Title'] = train['Name'].str.extract(' ([A-Za-z]+)\.',
+                                                             expand=False)
+        self.feat_test['Title'] = test['Name'].str.extract(' ([A-Za-z]+)\.',
+                                                            expand=False)
 
     def add_meta(self):
-        self.meta_dict['memo'] = 'feat1'
-        self.meta_dict['type'] = 'int'
+        self.meta_dict['memo'] = '敬称(Ms, Masterとか)'
+        self.meta_dict['type'] = 'caT'
         self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(self.now)
 
 
