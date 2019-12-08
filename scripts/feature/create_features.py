@@ -1,3 +1,4 @@
+import datetime
 import pandas as pd
 import logging
 from base import Feature, get_arguments, generate_features
@@ -5,6 +6,7 @@ from base import Feature, get_arguments, generate_features
 # params
 LOG_DIR = './../../logs/feature'
 Feature.dir = './../../data/feature'
+LENGTH = 100
 
 
 def preparation_logger():
@@ -31,9 +33,7 @@ def preparation_logger():
     logger.addHandler(fh)
     base_logger.addHandler(sh)
     base_logger.addHandler(fh)
-
-    return logger
-
+    return logger, sh, fh
 
 
 class FamilySize(Feature):
@@ -41,24 +41,40 @@ class FamilySize(Feature):
         self.feat_train['family_size'] = train['SibSp'] + train['Parch'] + 1
         self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
 
+    def add_meta(self):
+        now = datetime.datetime.now()
+        self.meta_dict['type'] = 'int'
+        self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(now)
+
 
 class MyFeat1(Feature):
     def create_features(self):
         self.feat_train['family_size'] = train['SibSp'] + train['Parch'] + 1
         self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
 
+    def add_meta(self):
+        now = datetime.datetime.now()
+        self.meta_dict['type'] = 'int'
+        self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(now)
+
 
 if __name__ == '__main__':
     # log
-    logger = preparation_logger()
-    
+    logger, _, fh = preparation_logger()
 
     # do
-    logger.info('-------------------- start')
     args = get_arguments()
 
     train = pd.read_csv('~/Git/my-pipeline-titanic/data/input/train.csv')
     test = pd.read_csv('~/Git/my-pipeline-titanic/data/input/test.csv')
-    generate_features(globals(), args.force)
 
+    # test mode?
+    if args.test:
+        fh.setLevel(logging.ERROR)  # file書き出ししないという意思表示
+        logger.info('********** test mode **********')
+        train = train[:LENGTH]
+        test = test[:LENGTH]
+
+    logger.info('-------------------- start')
+    generate_features(globals(), args.force, args.test)
     logger.info('-------------------- end')
