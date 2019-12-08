@@ -2,7 +2,7 @@ import sys
 import pandas as pd
 import logging
 from base import Feature, get_arguments, generate_features
-sys.path.append('../../utils')
+sys.path.append('../utils')
 from CONST import LOG_DIR, LENGTH
 
 # params

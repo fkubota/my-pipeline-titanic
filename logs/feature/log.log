@@ -2755,3 +2755,105 @@ test
 4   Mrs
 2019-12-09 08:19:24,155 base line 144 [INFO][save]  ===== finish Title =====
 2019-12-09 08:19:24,155 create_features line 85 [INFO][<module>] -------------------- end
+2019-12-09 08:53:08,104 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:53:08,117 create_features line 82 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-09 08:53:08,126 create_features line 83 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-09 08:53:08,127 base line 44 [INFO][generate_features] skip FamilySize
+2019-12-09 08:53:08,127 base line 44 [INFO][generate_features] skip Title
+2019-12-09 08:53:08,127 create_features line 85 [INFO][<module>] -------------------- end
+2019-12-09 08:53:13,355 create_features line 81 [INFO][<module>] -------------------- start
+2019-12-09 08:53:13,366 create_features line 82 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-09 08:53:13,376 create_features line 83 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-09 08:53:13,376 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:53:13,382 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:53:13,384 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:53:13,386 base line 123 [INFO][create_memo] memo: n_person in family
+2019-12-09 08:53:13,390 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:19:24.134263       Title    敬称(Ms, Masterとか)
+0  2019-12-09 08:53:13.376410  FamilySize  n_person in family
+2019-12-09 08:53:13,393 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-09 08:53:13,393 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-09 08:53:13,393 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:53:13,393 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:53:13,395 base line 142 [DEBUG][save] 
+train 
+   family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-09 08:53:13,397 base line 143 [DEBUG][save] 
+test 
+   family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-09 08:53:13,397 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-09 08:53:13,398 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-09 08:53:13,400 base line 97 [DEBUG][create_memo] exists
+2019-12-09 08:53:13,401 base line 110 [INFO][create_memo] overwrite memo
+2019-12-09 08:53:13,403 base line 123 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-09 08:53:13,407 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-09 08:53:13.376410  FamilySize  n_person in family
+0  2019-12-09 08:53:13.397609       Title    敬称(Ms, Masterとか)
+2019-12-09 08:53:13,408 base line 138 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-09 08:53:13,408 base line 139 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-09 08:53:13,409 base line 140 [DEBUG][save] train feat size=(891, 1)
+2019-12-09 08:53:13,409 base line 141 [DEBUG][save] test  feat size=(418, 1)
+2019-12-09 08:53:13,411 base line 142 [DEBUG][save] 
+train 
+  Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-09 08:53:13,413 base line 143 [DEBUG][save] 
+test 
+  Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-09 08:53:13,413 base line 144 [INFO][save]  ===== finish Title =====
+2019-12-09 08:53:13,413 create_features line 85 [INFO][<module>] -------------------- end

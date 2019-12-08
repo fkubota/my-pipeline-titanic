@@ -9,7 +9,7 @@ import argparse
 import inspect
 import logging
 import pickle
-sys.path.append('../../utils')
+sys.path.append('../utils')
 from CONST import MEMO_PATH
 
 
