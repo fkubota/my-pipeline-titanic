@@ -1,4 +1,3 @@
-import datetime
 import pandas as pd
 import logging
 from base import Feature, get_arguments, generate_features
@@ -42,9 +41,9 @@ class FamilySize(Feature):
         self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
 
     def add_meta(self):
-        now = datetime.datetime.now()
+        self.meta_dict['memo'] = 'n_person in family'
         self.meta_dict['type'] = 'int'
-        self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(now)
+        self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(self.now)
 
 
 class MyFeat1(Feature):
@@ -53,14 +52,14 @@ class MyFeat1(Feature):
         self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
 
     def add_meta(self):
-        now = datetime.datetime.now()
+        self.meta_dict['memo'] = 'feat1'
         self.meta_dict['type'] = 'int'
-        self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(now)
+        self.meta_dict['date'] = '{0:%Y-%m-%d %H:%M:%S}'.format(self.now)
 
 
 if __name__ == '__main__':
     # log
-    logger, _, fh = preparation_logger()
+    logger, sh, fh = preparation_logger()
 
     # do
     args = get_arguments()
@@ -71,6 +70,7 @@ if __name__ == '__main__':
     # test mode?
     if args.test:
         fh.setLevel(logging.ERROR)  # file書き出ししないという意思表示
+        sh.setLevel(logging.DEBUG)  # stream handler を infoからdebugへ
         logger.info('********** test mode **********')
         train = train[:LENGTH]
         test = test[:LENGTH]

@@ -1,4 +1,6 @@
 from abc import ABCMeta, abstractmethod
+import os
+import datetime
 from pathlib import Path
 import pandas as pd
 import numpy as np
@@ -6,6 +8,9 @@ import argparse
 import inspect
 import logging
 import pickle
+
+# params
+MEMO_PATH = './../../data/feature/_memo.csv'
 
 # logger
 logger = logging.getLogger('base')
@@ -35,10 +40,9 @@ def generate_features(namespace, overwrite, istest):
         path_tr_exist = f.feat_train_path.exists()
         path_te_exist = f.feat_test_path.exists()
         if path_tr_exist and path_te_exist and not overwrite:
-            logger.info(f.name, 'was skipped')
             logger.info(f'skip {f.name}')
         else:
-            f.run().save(istest)
+            f.run(overwrite).save(istest)
 
 
 class Feature(metaclass=ABCMeta):
@@ -48,17 +52,19 @@ class Feature(metaclass=ABCMeta):
 
     def __init__(self):
         self.name = self.__class__.__name__
+        self.now = datetime.datetime.now()
         self.feat_train = pd.DataFrame()
         self.feat_test = pd.DataFrame()
         self.feat_train_path = Path(self.dir) / f'{self.name}_train.pkl'
         self.feat_test_path = Path(self.dir) / f'{self.name}_test.pkl'
-        self.base_metas = np.array(['type', 'date'])
-        self.meta_dict = {}
+        self.basic_metas = np.array(['memo', 'type'])
+        self.meta_dict = {'date': self.now}
 
-    def run(self):
+    def run(self, overwrite):
         self.add_meta()
         self.check_meta()
         self.create_features()
+        self.create_memo(overwrite)
         prefix = self.prefix + '_' if self.prefix else ''
         suffix = '_' + self.suffix if self.suffix else ''
         self.feat_train.columns = prefix + self.feat_train.columns + suffix
@@ -75,21 +81,47 @@ class Feature(metaclass=ABCMeta):
 
     def check_meta(self):
         keys_meta = self.meta_dict.keys()
-        logic_check = [key in keys_meta for key in self.base_metas]
+        logic_check = [key in keys_meta for key in self.basic_metas]
+        # basic_meta情報に抜けがないか確認
         if all(logic_check):
             logger.info('check_meta ... ok')
         else:
             idxs = np.logical_not(logic_check)
-            text0 = f'{self.name} の base meta のkeyが欠損しています。'
-            text1 = 'deficiency_key: {self.base_keys[idxs]}'
+            text0 = f'{self.name} の basic meta のkeyが欠損しています。'
+            text1 = 'deficiency_key: {self.basic_keys[idxs]}'
             raise RuntimeError(text0 + text1)
 
-    # def add_meta(self):
-    #     feat_train_dict = {}
-    #     feat_test_dict = {}
+    def create_memo(self, overwrite):
+        if os.path.isfile(MEMO_PATH):
+            logger.debug('exists')
+            df = pd.read_csv(MEMO_PATH)
+        else:
+            logger.debug('none')
+            df = pd.DataFrame()
+            df['date'] = self.now
+            df['feat_name'] = [self.name]
+            df['memo'] = [self.meta_dict['memo']]
+            df.to_csv(MEMO_PATH, index=False, encoding='utf-8')
+            return
 
-    #    feat_train_dict['df'] = self.feat_train
-    #    feat_test_dict['df'] = self.feat_test
+        # overwrite オプション
+        if overwrite:
+            logger.info('overwrite memo')
+            df = df[df['feat_name'] != self.name]
+
+        # すでにメモに存在していたら、何もしない
+        feat_names = df['feat_name'].values
+        if self.name in feat_names:
+            return
+
+        _dict = {'date': [self.now],
+                 'feat_name': [self.name],
+                 'memo': [self.meta_dict['memo']]}
+        new_df = pd.DataFrame(_dict)
+        df = pd.concat([df, new_df], axis=0)
+        logger.info(f'memo: {self.meta_dict["memo"]}')
+        logger.debug(f'_memo.csv: {df}')
+        df.to_csv(MEMO_PATH, index=False, encoding='utf-8')
 
     def save(self, istest):
         if istest:
