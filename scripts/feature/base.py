@@ -68,8 +68,10 @@ class Feature(metaclass=ABCMeta):
 
     def save(self):
         data = 0
-        with open(self.feat_train_path, mode='wb') as f:
-            pickle.dump(data, f)
+        # with open(self.feat_train_path, mode='wb') as f:
+        #     pickle.dump(data, f)
+        # with open(self.feat_test_path, mode='wb') as f:
+        #     pickle.dump(data, f)
 
         logger.debug(f'save path={self.feat_train_path}')
         logger.debug(f'save path={self.feat_test_path}')

@@ -7,19 +7,7 @@ LOG_DIR = './../../logs/feature'
 Feature.dir = './../../data/feature'
 
 
-class FamilySize(Feature):
-    def create_features(self):
-        self.feat_train['family_size'] = train['SibSp'] + train['Parch'] + 1
-        self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
-
-
-class MyFeat1(Feature):
-    def create_features(self):
-        self.feat_train['family_size'] = train['SibSp'] + train['Parch'] + 1
-        self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
-
-
-if __name__ == '__main__':
+def preparation_logger():
     form = '%(asctime)s %(name)s line %(lineno)d [%(levelname)s][%(funcName)s] %(message)s'
     formatter = logging.Formatter(form)
 
@@ -43,6 +31,27 @@ if __name__ == '__main__':
     logger.addHandler(fh)
     base_logger.addHandler(sh)
     base_logger.addHandler(fh)
+
+    return logger
+
+
+
+class FamilySize(Feature):
+    def create_features(self):
+        self.feat_train['family_size'] = train['SibSp'] + train['Parch'] + 1
+        self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
+
+
+class MyFeat1(Feature):
+    def create_features(self):
+        self.feat_train['family_size'] = train['SibSp'] + train['Parch'] + 1
+        self.feat_test['family_size'] = test['SibSp'] + test['Parch'] + 1
+
+
+if __name__ == '__main__':
+    # log
+    logger = preparation_logger()
+    
 
     # do
     logger.info('-------------------- start')
