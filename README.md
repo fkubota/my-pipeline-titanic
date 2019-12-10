@@ -11,3 +11,7 @@
 
 - えじさん
 	> https://amalog.hateblo.jp/entry/kaggle-feature-management
+
+## 学習パイプライン
+- kaggle本(threecourceさん)
+	> https://github.com/ghmagazine/kagglebook/tree/master/ch04-model-interface
