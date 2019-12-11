@@ -71,45 +71,6 @@ class Runner:
             logger.info(f'{self.run_name} fold {i_fold} - end training - score {score}')
 
             # モデルを保存する
-            # model.save_model()
-
-            # 結果を保持する
-            va_idxes.append(va_idx)
-            scores.append(score)
-            preds.append(va_pred)
-
-        # 各foldの結果をまとめる
-        va_idxes = np.concatenate(va_idxes)
-        order = np.argsort(va_idxes)
-        preds = np.concatenate(preds, axis=0)
-        preds = preds[order]
-
-        logger.info(f'{self.run_name} - end training cv - score {np.mean(scores)}')
-
-        # 予測結果の保存
-        # Util.dump(preds, f'../model/pred/{self.run_name}-train.pkl')
-
-        # 評価結果の保存
-        # logger.result_scores(self.run_name, scores)
-
-    def run_train_cv(self) -> None:
-        """クロスバリデーションでの学習・評価を行う
-        学習・評価とともに、各foldのモデルの保存、スコアのログ出力についても行う
-        """
-        logger.info(f'{self.run_name} - start training cv')
-
-        scores = []
-        va_idxes = []
-        preds = []
-
-        # 各foldで学習を行う
-        for i_fold in range(self.n_fold):
-            # 学習を行う
-            logger.info(f'{self.run_name} fold {i_fold} - start training')
-            model, va_idx, va_pred, score = self.train_fold(i_fold)
-            logger.info(f'{self.run_name} fold {i_fold} - end training - score {score}')
-
-            # モデルを保存する
             model.save_model()
 
             # 結果を保持する
