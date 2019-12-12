@@ -1,13 +1,10 @@
-import numpy as np
 import pandas as pd
 from logging import getLogger
+from CONST import TRAIN_PATH, TEST_PATH
 
-TRAIN_DATA = '../data/input/train.csv'
-TEST_DATA  = '../data/input/test.csv'
+logger = getLogger('load_data')
 
-logger = getLogger(__name__)
-
-def read_csv(path):
+def load_csv(path):
     logger.debug('enter')
     df = pd.read_csv(path)
     logger.debug('exit')
@@ -15,13 +12,13 @@ def read_csv(path):
 
 def load_train_data():
     logger.debug('enter')
-    df = load_csv(TRAIN_DATA)
+    df = load_csv(TRAIN_PATH)
     logger.debug('exit')
     return df
 
 def load_test_data():
     logger.debug('enter')
-    df = load_csv(TEST_DATA)
+    df = load_csv(TEST_PATH)
     logger.debug('exit')
     return df
 

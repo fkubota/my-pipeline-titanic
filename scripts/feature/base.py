@@ -129,11 +129,10 @@ class Feature(metaclass=ABCMeta):
             logger.info('not save feature')
             pass
         else:
-            data = 0
             with open(self.feat_train_path, mode='wb') as f:
-                pickle.dump(data, f)
+                pickle.dump(self.feat_train, f)
             with open(self.feat_test_path, mode='wb') as f:
-                pickle.dump(data, f)
+                pickle.dump(self.feat_test, f)
 
         logger.debug(f'save path={self.feat_train_path}')
         logger.debug(f'save path={self.feat_test_path}')

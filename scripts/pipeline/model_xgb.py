@@ -1,6 +1,8 @@
+import sys
 import os
 import xgboost as xgb
 from model import Model
+sys.path.append('../utils')
 from util import Util
 
 

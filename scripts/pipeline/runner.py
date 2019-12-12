@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 import pandas as pd
 import logging
@@ -5,24 +6,30 @@ from model import Model
 from sklearn.metrics import log_loss
 from sklearn.model_selection import StratifiedKFold
 from typing import Callable, List, Optional, Tuple, Union
+sys.path.append('../utils')
+# from util import load_train_data, load_test_data
+from util import Util
 
 # logger
 logger = logging.getLogger('runner')
 logger.setLevel(logging.DEBUG)
+load_data_logger = logging.getLogger('util')
+load_data_logger.setLevel(logging.DEBUG)
 
 
 class Runner:
 
-    def __init__(self, run_name: str, model_cls: Callable[[str, dict], Model], features: List[str], params: dict):
+    def __init__(self, run_name: str, model_cls: Callable[[str, dict], Model], feat_grps: List[str], params: dict):
         """コンストラクタ
         :param run_name: ランの名前
         :param model_cls: モデルのクラス
-        :param features: 特徴量のリスト
+        :param feat_grps: 特徴量グループ名
         :param params: ハイパーパラメータ
         """
         self.run_name = run_name
         self.model_cls = model_cls
-        self.features = features
+        # self.features = features
+        self.feat_grps = feat_grps
         self.params = params
         self.n_fold = 4
 
@@ -135,14 +142,14 @@ class Runner:
         # 学習データの読込を行う
         # 列名で抽出する以上のことを行う場合、このメソッドの修正が必要
         # 毎回train.csvを読み込むのは効率が悪いため、データに応じて適宜対応するのが望ましい（他メソッドも同様）
-        return pd.read_csv('../../data/input/train.csv')[self.features]
+        return Util.load_train_features(self.feat_grps)
 
     def load_y_train(self) -> pd.Series:
         """学習データの目的変数を読み込む
         :return: 学習データの目的変数
         """
         # 目的変数の読込を行う
-        train_y = pd.read_csv('../../data/input/train.csv')['Survived']
+        train_y = Util.load_train_data()['Survived']
         # train_y = np.array([int(st[-1]) for st in train_y]) - 1
         train_y = pd.Series(train_y)
         return train_y
@@ -151,7 +158,8 @@ class Runner:
         """テストデータの特徴量を読み込む
         :return: テストデータの特徴量
         """
-        return pd.read_csv('../../data/input/test.csv')[self.features]
+        # return Util.load_test_data()[self.features]
+        return Util.load_test_features(self.feat_grps)
 
     def load_index_fold(self, i_fold: int) -> np.array:
         """クロスバリデーションでのfoldを指定して対応するレコードのインデックスを返す

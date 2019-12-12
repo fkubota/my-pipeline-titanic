@@ -7,12 +7,17 @@ from runner import Runner
 import logging
 # from util import Submission
 
+
 def preparation_logger():
+
     logger = logging.getLogger('run')
     runner_logger = logging.getLogger('runner')
+    util_logger = logging.getLogger('util')
+
     logger.setLevel(logging.DEBUG)
     runner_logger.setLevel(logging.DEBUG)
-    
+    util_logger.setLevel(logging.DEBUG)
+
     # 標準出力
     sh = logging.StreamHandler()
     sh.setLevel(logging.INFO)
@@ -20,6 +25,7 @@ def preparation_logger():
     # ハンドラー登録
     logger.addHandler(sh)
     runner_logger.addHandler(sh)
+    util_logger.addHandler(sh)
 
     return logger, sh
 
@@ -28,7 +34,6 @@ if __name__ == '__main__':
     # logging
     logger, sh = preparation_logger()
     logger.info('******************** start pipeline ********************')
-
 
     params_xgb = {
         'objective': 'binary:logistic',
@@ -49,10 +54,10 @@ if __name__ == '__main__':
     params_xgb_all['num_round'] = 30 # 350
 
     # 特徴量の指定
-    features = ['Age']
+    feat_grps = ['FamilySize']
 
     # xgboostによる学習・予測
-    runner = Runner('xgb1', ModelXGB, features, params_xgb)
+    runner = Runner('xgb1', ModelXGB, feat_grps, params_xgb)
     runner.run_train_cv()
     runner.run_predict_cv()
     logger.info('******************** end pipeline ********************')

@@ -3,10 +3,10 @@ import pandas as pd
 import logging
 from base import Feature, get_arguments, generate_features
 sys.path.append('../utils')
-from CONST import LOG_DIR, LENGTH
+from CONST import LOG_DIR, TEST_LENGTH, FEAT_DIR
 
 # params
-Feature.dir = './../../data/feature'
+Feature.dir = FEAT_DIR
 
 
 def preparation_logger():
@@ -52,7 +52,7 @@ class Title(Feature):
         self.feat_train['Title'] = train['Name'].str.extract(' ([A-Za-z]+)\.',
                                                              expand=False)
         self.feat_test['Title'] = test['Name'].str.extract(' ([A-Za-z]+)\.',
-                                                            expand=False)
+                                                             expand=False)
 
     def add_meta(self):
         self.meta_dict['memo'] = '敬称(Ms, Masterとか)'
@@ -75,8 +75,8 @@ if __name__ == '__main__':
         fh.setLevel(logging.ERROR)  # file書き出ししないという意思表示
         sh.setLevel(logging.DEBUG)  # stream handler を infoからdebugへ
         logger.info('********** test mode **********')
-        train = train[:LENGTH]
-        test = test[:LENGTH]
+        train = train[:TEST_LENGTH]
+        test = test[:TEST_LENGTH]
 
     logger.info('-------------------- start')
     logger.debug(f'\n-train\n {train.head()}')
