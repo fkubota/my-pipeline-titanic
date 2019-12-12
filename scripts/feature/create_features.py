@@ -1,12 +1,9 @@
 import sys
-import pandas as pd
 import logging
-from base import Feature, get_arguments, generate_features
+from base import Feature, generate_features
 sys.path.append('../utils')
-from CONST import LOG_DIR, TEST_LENGTH, FEAT_DIR
-
-# params
-Feature.dir = FEAT_DIR
+from CONST import LOG_DIR, DEBUG_LENGTH
+from util import Util
 
 
 def preparation_logger():
@@ -65,21 +62,20 @@ if __name__ == '__main__':
     logger, sh, fh = preparation_logger()
 
     # do
-    args = get_arguments()
-
-    train = pd.read_csv('~/Git/my-pipeline-titanic/data/input/train.csv')
-    test = pd.read_csv('~/Git/my-pipeline-titanic/data/input/test.csv')
+    args = Util.get_arguments()
+    train = Util.load_train_data()
+    test = Util.load_test_data()
 
     # test mode?
-    if args.test:
+    if args.debug:
         fh.setLevel(logging.ERROR)  # file書き出ししないという意思表示
         sh.setLevel(logging.DEBUG)  # stream handler を infoからdebugへ
+        logger.info('*******************************')
         logger.info('********** test mode **********')
-        train = train[:TEST_LENGTH]
-        test = test[:TEST_LENGTH]
+        logger.info('*******************************')
 
     logger.info('-------------------- start')
     logger.debug(f'\n-train\n {train.head()}')
     logger.debug(f'\n-test\n {test.head()}')
-    generate_features(globals(), args.force, args.test)
+    generate_features(globals(), args.force, args.debug)
     logger.info('-------------------- end')

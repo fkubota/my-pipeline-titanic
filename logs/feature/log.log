@@ -3157,3 +3157,582 @@ test
 2019-12-12 08:54:52,457 base line 44 [INFO][generate_features] skip FamilySize
 2019-12-12 08:54:52,458 base line 44 [INFO][generate_features] skip Title
 2019-12-12 08:54:52,458 create_features line 85 [INFO][<module>] -------------------- end
+2019-12-13 07:33:20,081 create_features line 78 [INFO][<module>] -------------------- start
+2019-12-13 07:33:20,095 create_features line 79 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 07:33:20,106 create_features line 80 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 07:33:20,106 base line 44 [INFO][generate_features] skip FamilySize
+2019-12-13 07:33:20,107 base line 44 [INFO][generate_features] skip Title
+2019-12-13 07:33:20,107 create_features line 82 [INFO][<module>] -------------------- end
+2019-12-13 07:33:28,950 create_features line 78 [INFO][<module>] -------------------- start
+2019-12-13 07:33:28,962 create_features line 79 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 07:33:28,973 create_features line 80 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 07:33:28,973 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-13 07:33:28,976 base line 97 [DEBUG][create_memo] exists
+2019-12-13 07:33:28,977 base line 110 [INFO][create_memo] overwrite memo
+2019-12-13 07:33:28,979 base line 123 [INFO][create_memo] memo: n_person in family
+2019-12-13 07:33:28,984 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-12 08:36:55.845687       Title    敬称(Ms, Masterとか)
+0  2019-12-13 07:33:28.973195  FamilySize  n_person in family
+2019-12-13 07:33:28,987 base line 137 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-13 07:33:28,987 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-13 07:33:28,987 base line 139 [DEBUG][save] train feat size=(891, 1)
+2019-12-13 07:33:28,987 base line 140 [DEBUG][save] test  feat size=(418, 1)
+2019-12-13 07:33:28,990 base line 141 [DEBUG][save] 
+train 
+   family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-13 07:33:28,992 base line 142 [DEBUG][save] 
+test 
+   family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-13 07:33:28,992 base line 143 [INFO][save]  ===== finish FamilySize =====
+2019-12-13 07:33:28,993 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-13 07:33:28,996 base line 97 [DEBUG][create_memo] exists
+2019-12-13 07:33:28,997 base line 110 [INFO][create_memo] overwrite memo
+2019-12-13 07:33:28,999 base line 123 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-13 07:33:29,002 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-13 07:33:28.973195  FamilySize  n_person in family
+0  2019-12-13 07:33:28.993032       Title    敬称(Ms, Masterとか)
+2019-12-13 07:33:29,004 base line 137 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-13 07:33:29,004 base line 138 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-13 07:33:29,004 base line 139 [DEBUG][save] train feat size=(891, 1)
+2019-12-13 07:33:29,004 base line 140 [DEBUG][save] test  feat size=(418, 1)
+2019-12-13 07:33:29,006 base line 141 [DEBUG][save] 
+train 
+  Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-13 07:33:29,009 base line 142 [DEBUG][save] 
+test 
+  Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-13 07:33:29,009 base line 143 [INFO][save]  ===== finish Title =====
+2019-12-13 07:33:29,009 create_features line 82 [INFO][<module>] -------------------- end
+2019-12-13 07:43:54,741 create_features line 79 [INFO][<module>] -------------------- start
+2019-12-13 07:43:54,754 create_features line 80 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 07:43:54,763 create_features line 81 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 07:43:54,764 base line 44 [INFO][generate_features] skip FamilySize
+2019-12-13 07:43:54,765 base line 44 [INFO][generate_features] skip Title
+2019-12-13 07:43:54,765 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-13 07:43:59,423 create_features line 79 [INFO][<module>] -------------------- start
+2019-12-13 07:43:59,434 create_features line 80 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 07:43:59,444 create_features line 81 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 07:43:59,445 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-13 07:43:59,447 base line 97 [DEBUG][create_memo] exists
+2019-12-13 07:43:59,448 base line 110 [INFO][create_memo] overwrite memo
+2019-12-13 07:43:59,451 base line 123 [INFO][create_memo] memo: n_person in family
+2019-12-13 07:43:59,455 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-13 07:33:28.993032       Title    敬称(Ms, Masterとか)
+0  2019-12-13 07:43:59.444569  FamilySize  n_person in family
+2019-12-13 07:43:59,458 base line 137 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-13 07:43:59,458 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-13 07:43:59,458 base line 139 [DEBUG][save] train feat size=(891, 1)
+2019-12-13 07:43:59,458 base line 140 [DEBUG][save] test  feat size=(418, 1)
+2019-12-13 07:43:59,461 base line 141 [DEBUG][save] 
+train 
+   family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-13 07:43:59,463 base line 142 [DEBUG][save] 
+test 
+   family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-13 07:43:59,463 base line 143 [INFO][save]  ===== finish FamilySize =====
+2019-12-13 07:43:59,464 base line 88 [INFO][check_meta] check_meta ... ok
+2019-12-13 07:43:59,467 base line 97 [DEBUG][create_memo] exists
+2019-12-13 07:43:59,468 base line 110 [INFO][create_memo] overwrite memo
+2019-12-13 07:43:59,470 base line 123 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-13 07:43:59,473 base line 124 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-13 07:43:59.444569  FamilySize  n_person in family
+0  2019-12-13 07:43:59.463600       Title    敬称(Ms, Masterとか)
+2019-12-13 07:43:59,475 base line 137 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-13 07:43:59,475 base line 138 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-13 07:43:59,475 base line 139 [DEBUG][save] train feat size=(891, 1)
+2019-12-13 07:43:59,475 base line 140 [DEBUG][save] test  feat size=(418, 1)
+2019-12-13 07:43:59,477 base line 141 [DEBUG][save] 
+train 
+  Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-13 07:43:59,479 base line 142 [DEBUG][save] 
+test 
+  Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-13 07:43:59,479 base line 143 [INFO][save]  ===== finish Title =====
+2019-12-13 07:43:59,479 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-13 08:17:06,200 create_features line 79 [INFO][<module>] -------------------- start
+2019-12-13 08:17:06,215 create_features line 80 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 08:17:06,224 create_features line 81 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 08:17:06,225 base line 45 [INFO][generate_features] skip FamilySize
+2019-12-13 08:17:06,226 base line 45 [INFO][generate_features] skip Title
+2019-12-13 08:17:06,226 create_features line 83 [INFO][<module>] -------------------- end
+2019-12-13 08:18:19,285 create_features line 77 [INFO][<module>] -------------------- start
+2019-12-13 08:18:19,297 create_features line 78 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 08:18:19,306 create_features line 79 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 08:18:19,307 base line 45 [INFO][generate_features] skip FamilySize
+2019-12-13 08:18:19,307 base line 45 [INFO][generate_features] skip Title
+2019-12-13 08:18:19,307 create_features line 81 [INFO][<module>] -------------------- end
+2019-12-13 08:18:25,084 create_features line 77 [INFO][<module>] -------------------- start
+2019-12-13 08:18:25,096 create_features line 78 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 08:18:25,105 create_features line 79 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 08:18:25,105 base line 89 [INFO][check_meta] check_meta ... ok
+2019-12-13 08:18:25,117 base line 98 [DEBUG][create_memo] exists
+2019-12-13 08:18:25,118 base line 111 [INFO][create_memo] overwrite memo
+2019-12-13 08:18:25,120 base line 124 [INFO][create_memo] memo: n_person in family
+2019-12-13 08:18:25,124 base line 125 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-13 07:43:59.463600       Title    敬称(Ms, Masterとか)
+0  2019-12-13 08:18:25.105502  FamilySize  n_person in family
+2019-12-13 08:18:25,127 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-13 08:18:25,127 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-13 08:18:25,127 base line 140 [DEBUG][save] train feat size=(222, 1)
+2019-12-13 08:18:25,127 base line 141 [DEBUG][save] test  feat size=(222, 1)
+2019-12-13 08:18:25,129 base line 142 [DEBUG][save] 
+train 
+   family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-13 08:18:25,131 base line 143 [DEBUG][save] 
+test 
+   family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-13 08:18:25,131 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-13 08:18:25,132 base line 89 [INFO][check_meta] check_meta ... ok
+2019-12-13 08:18:25,134 base line 98 [DEBUG][create_memo] exists
+2019-12-13 08:18:25,135 base line 111 [INFO][create_memo] overwrite memo
+2019-12-13 08:18:25,136 base line 124 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-13 08:18:25,140 base line 125 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-13 08:18:25.105502  FamilySize  n_person in family
+0  2019-12-13 08:18:25.131771       Title    敬称(Ms, Masterとか)
+2019-12-13 08:18:25,141 base line 138 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-13 08:18:25,141 base line 139 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-13 08:18:25,142 base line 140 [DEBUG][save] train feat size=(222, 1)
+2019-12-13 08:18:25,142 base line 141 [DEBUG][save] test  feat size=(222, 1)
+2019-12-13 08:18:25,144 base line 142 [DEBUG][save] 
+train 
+  Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-13 08:18:25,146 base line 143 [DEBUG][save] 
+test 
+  Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-13 08:18:25,146 base line 144 [INFO][save]  ===== finish Title =====
+2019-12-13 08:18:25,146 create_features line 81 [INFO][<module>] -------------------- end
+2019-12-13 08:18:31,428 create_features line 77 [INFO][<module>] -------------------- start
+2019-12-13 08:18:31,440 create_features line 78 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 08:18:31,449 create_features line 79 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 08:18:31,449 base line 45 [INFO][generate_features] skip FamilySize
+2019-12-13 08:18:31,450 base line 45 [INFO][generate_features] skip Title
+2019-12-13 08:18:31,450 create_features line 81 [INFO][<module>] -------------------- end
+2019-12-13 08:18:34,403 create_features line 77 [INFO][<module>] -------------------- start
+2019-12-13 08:18:34,414 create_features line 78 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 08:18:34,423 create_features line 79 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 08:18:34,424 base line 89 [INFO][check_meta] check_meta ... ok
+2019-12-13 08:18:34,426 base line 98 [DEBUG][create_memo] exists
+2019-12-13 08:18:34,427 base line 111 [INFO][create_memo] overwrite memo
+2019-12-13 08:18:34,429 base line 124 [INFO][create_memo] memo: n_person in family
+2019-12-13 08:18:34,433 base line 125 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-13 08:18:25.131771       Title    敬称(Ms, Masterとか)
+0  2019-12-13 08:18:34.423824  FamilySize  n_person in family
+2019-12-13 08:18:34,436 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-13 08:18:34,436 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-13 08:18:34,436 base line 140 [DEBUG][save] train feat size=(222, 1)
+2019-12-13 08:18:34,436 base line 141 [DEBUG][save] test  feat size=(222, 1)
+2019-12-13 08:18:34,438 base line 142 [DEBUG][save] 
+train 
+   family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-13 08:18:34,441 base line 143 [DEBUG][save] 
+test 
+   family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-13 08:18:34,442 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-13 08:18:34,443 base line 89 [INFO][check_meta] check_meta ... ok
+2019-12-13 08:18:34,445 base line 98 [DEBUG][create_memo] exists
+2019-12-13 08:18:34,446 base line 111 [INFO][create_memo] overwrite memo
+2019-12-13 08:18:34,448 base line 124 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-13 08:18:34,452 base line 125 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-13 08:18:34.423824  FamilySize  n_person in family
+0  2019-12-13 08:18:34.442340       Title    敬称(Ms, Masterとか)
+2019-12-13 08:18:34,454 base line 138 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-13 08:18:34,454 base line 139 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-13 08:18:34,454 base line 140 [DEBUG][save] train feat size=(222, 1)
+2019-12-13 08:18:34,454 base line 141 [DEBUG][save] test  feat size=(222, 1)
+2019-12-13 08:18:34,457 base line 142 [DEBUG][save] 
+train 
+  Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-13 08:18:34,459 base line 143 [DEBUG][save] 
+test 
+  Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-13 08:18:34,459 base line 144 [INFO][save]  ===== finish Title =====
+2019-12-13 08:18:34,459 create_features line 81 [INFO][<module>] -------------------- end
+2019-12-13 08:24:33,286 create_features line 77 [INFO][<module>] -------------------- start
+2019-12-13 08:24:33,298 create_features line 78 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 08:24:33,308 create_features line 79 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 08:25:40,564 create_features line 77 [INFO][<module>] -------------------- start
+2019-12-13 08:25:40,578 create_features line 78 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 08:25:40,588 create_features line 79 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 08:25:40,589 base line 45 [INFO][generate_features] skip FamilySize
+2019-12-13 08:25:40,589 base line 45 [INFO][generate_features] skip Title
+2019-12-13 08:25:40,589 create_features line 81 [INFO][<module>] -------------------- end
+2019-12-13 08:25:43,088 create_features line 77 [INFO][<module>] -------------------- start
+2019-12-13 08:25:43,099 create_features line 78 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 08:25:43,108 create_features line 79 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 08:25:43,109 base line 45 [INFO][generate_features] skip FamilySize
+2019-12-13 08:25:43,109 base line 45 [INFO][generate_features] skip Title
+2019-12-13 08:25:43,109 create_features line 81 [INFO][<module>] -------------------- end
+2019-12-13 08:25:45,855 create_features line 77 [INFO][<module>] -------------------- start
+2019-12-13 08:25:45,866 create_features line 78 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass  ...     Fare Cabin  Embarked
+0            1         0       3  ...   7.2500   NaN         S
+1            2         1       1  ...  71.2833   C85         C
+2            3         1       3  ...   7.9250   NaN         S
+3            4         1       1  ...  53.1000  C123         S
+4            5         0       3  ...   8.0500   NaN         S
+
+[5 rows x 12 columns]
+2019-12-13 08:25:45,876 create_features line 79 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name  ...     Fare  Cabin  Embarked
+0          892       3                              Kelly, Mr. James  ...   7.8292    NaN         Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  ...   7.0000    NaN         S
+2          894       2                     Myles, Mr. Thomas Francis  ...   9.6875    NaN         Q
+3          895       3                              Wirz, Mr. Albert  ...   8.6625    NaN         S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  ...  12.2875    NaN         S
+
+[5 rows x 11 columns]
+2019-12-13 08:25:45,876 base line 89 [INFO][check_meta] check_meta ... ok
+2019-12-13 08:25:45,879 base line 98 [DEBUG][create_memo] exists
+2019-12-13 08:25:45,880 base line 111 [INFO][create_memo] overwrite memo
+2019-12-13 08:25:45,881 base line 124 [INFO][create_memo] memo: n_person in family
+2019-12-13 08:25:45,886 base line 125 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-13 08:18:57.032473       Title    敬称(Ms, Masterとか)
+0  2019-12-13 08:25:45.876489  FamilySize  n_person in family
+2019-12-13 08:25:45,889 base line 138 [DEBUG][save] save path=../../data/feature/FamilySize_train.pkl
+2019-12-13 08:25:45,889 base line 139 [DEBUG][save] save path=../../data/feature/FamilySize_test.pkl
+2019-12-13 08:25:45,889 base line 140 [DEBUG][save] train feat size=(222, 1)
+2019-12-13 08:25:45,889 base line 141 [DEBUG][save] test  feat size=(222, 1)
+2019-12-13 08:25:45,892 base line 142 [DEBUG][save] 
+train 
+   family_size
+0            2
+1            2
+2            1
+3            2
+4            1
+2019-12-13 08:25:45,894 base line 143 [DEBUG][save] 
+test 
+   family_size
+0            1
+1            2
+2            1
+3            1
+4            3
+2019-12-13 08:25:45,894 base line 144 [INFO][save]  ===== finish FamilySize =====
+2019-12-13 08:25:45,895 base line 89 [INFO][check_meta] check_meta ... ok
+2019-12-13 08:25:45,897 base line 98 [DEBUG][create_memo] exists
+2019-12-13 08:25:45,898 base line 111 [INFO][create_memo] overwrite memo
+2019-12-13 08:25:45,900 base line 124 [INFO][create_memo] memo: 敬称(Ms, Masterとか)
+2019-12-13 08:25:45,904 base line 125 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+1  2019-12-13 08:25:45.876489  FamilySize  n_person in family
+0  2019-12-13 08:25:45.894502       Title    敬称(Ms, Masterとか)
+2019-12-13 08:25:45,906 base line 138 [DEBUG][save] save path=../../data/feature/Title_train.pkl
+2019-12-13 08:25:45,906 base line 139 [DEBUG][save] save path=../../data/feature/Title_test.pkl
+2019-12-13 08:25:45,906 base line 140 [DEBUG][save] train feat size=(222, 1)
+2019-12-13 08:25:45,906 base line 141 [DEBUG][save] test  feat size=(222, 1)
+2019-12-13 08:25:45,908 base line 142 [DEBUG][save] 
+train 
+  Title
+0    Mr
+1   Mrs
+2  Miss
+3   Mrs
+4    Mr
+2019-12-13 08:25:45,910 base line 143 [DEBUG][save] 
+test 
+  Title
+0    Mr
+1   Mrs
+2    Mr
+3    Mr
+4   Mrs
+2019-12-13 08:25:45,910 base line 144 [INFO][save]  ===== finish Title =====
+2019-12-13 08:25:45,910 create_features line 81 [INFO][<module>] -------------------- end

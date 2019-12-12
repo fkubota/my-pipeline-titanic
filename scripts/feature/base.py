@@ -5,12 +5,13 @@ import datetime
 from pathlib import Path
 import pandas as pd
 import numpy as np
-import argparse
+# import argparse
 import inspect
 import logging
 import pickle
 sys.path.append('../utils')
-from CONST import MEMO_PATH
+from CONST import MEMO_PATH, FEAT_DIR
+from util import Util
 
 
 # logger
@@ -18,14 +19,14 @@ logger = logging.getLogger('base')
 logger.setLevel(logging.DEBUG)
 
 
-def get_arguments():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--force', '-f', action='store_true',
-                        help='Overwrite existing files')
-
-    parser.add_argument('--test', '-t', action='store_true',
-                        help='test mode')
-    return parser.parse_args()
+#def get_arguments():
+#    parser = argparse.ArgumentParser()
+#    parser.add_argument('--force', '-f', action='store_true',
+#                        help='Overwrite existing files')
+#
+#    parser.add_argument('--test', '-t', action='store_true',
+#                        help='test mode')
+#    return parser.parse_args()
 
 
 def get_features(namespace):
@@ -36,20 +37,20 @@ def get_features(namespace):
             yield v()
 
 
-def generate_features(namespace, overwrite, istest):
+def generate_features(namespace, overwrite, isdebug):
     for f in get_features(namespace):
         path_tr_exist = f.feat_train_path.exists()
         path_te_exist = f.feat_test_path.exists()
         if path_tr_exist and path_te_exist and not overwrite:
             logger.info(f'skip {f.name}')
         else:
-            f.run(overwrite).save(istest)
+            f.run(overwrite).save(isdebug)
 
 
 class Feature(metaclass=ABCMeta):
     prefix = ''
     suffix = ''
-    dir = '.'
+    dir = FEAT_DIR
 
     def __init__(self):
         self.name = self.__class__.__name__
@@ -124,8 +125,8 @@ class Feature(metaclass=ABCMeta):
         logger.debug(f'_memo.csv: {df}')
         df.to_csv(MEMO_PATH, index=False, encoding='utf-8')
 
-    def save(self, istest):
-        if istest:
+    def save(self, isdebug):
+        if isdebug:
             logger.info('not save feature')
             pass
         else:

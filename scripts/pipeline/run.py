@@ -1,11 +1,20 @@
-import numpy as np
-import pandas as pd
-
-# From model_nn import ModelNN
+import sys
+# import numpy as np
+# import pandas as pd
+import argparse
 from model_xgb import ModelXGB
 from runner import Runner
 import logging
 # from util import Submission
+sys.path.append('../utils')
+from CONST import TEST_LENGTH
+
+
+def get_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--test', '-t', action='store_true',
+                        help='test_mode')
+    return parser.parse_args()
 
 
 def preparation_logger():
@@ -31,6 +40,7 @@ def preparation_logger():
 
 
 if __name__ == '__main__':
+
     # logging
     logger, sh = preparation_logger()
     logger.info('******************** start pipeline ********************')
@@ -51,7 +61,7 @@ if __name__ == '__main__':
     }
 
     params_xgb_all = dict(params_xgb)
-    params_xgb_all['num_round'] = 30 # 350
+    params_xgb_all['num_round'] = 30  # 350
 
     # 特徴量の指定
     feat_grps = ['FamilySize']
