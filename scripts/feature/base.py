@@ -19,16 +19,6 @@ logger = logging.getLogger('base')
 logger.setLevel(logging.DEBUG)
 
 
-#def get_arguments():
-#    parser = argparse.ArgumentParser()
-#    parser.add_argument('--force', '-f', action='store_true',
-#                        help='Overwrite existing files')
-#
-#    parser.add_argument('--test', '-t', action='store_true',
-#                        help='test mode')
-#    return parser.parse_args()
-
-
 def get_features(namespace):
     for k, v in namespace.items():
         isclass = inspect.isclass(v)
@@ -90,7 +80,7 @@ class Feature(metaclass=ABCMeta):
         else:
             idxs = np.logical_not(logic_check)
             text0 = f'{self.name} の basic meta のkeyが欠損しています。'
-            text1 = 'deficiency_key: {self.basic_keys[idxs]}'
+            text1 = f'deficiency_key: {self.basic_keys[idxs]}'
             raise RuntimeError(text0 + text1)
 
     def create_memo(self, overwrite):

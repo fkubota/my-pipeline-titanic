@@ -49,7 +49,7 @@ class Title(Feature):
         self.feat_train['Title'] = train['Name'].str.extract(' ([A-Za-z]+)\.',
                                                              expand=False)
         self.feat_test['Title'] = test['Name'].str.extract(' ([A-Za-z]+)\.',
-                                                             expand=False)
+                                                           expand=False)
 
     def add_meta(self):
         self.meta_dict['memo'] = '敬称(Ms, Masterとか)'

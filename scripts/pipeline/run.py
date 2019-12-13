@@ -1,20 +1,13 @@
 import sys
 # import numpy as np
 # import pandas as pd
-import argparse
 from model_xgb import ModelXGB
 from runner import Runner
 import logging
 # from util import Submission
 sys.path.append('../utils')
-from CONST import TEST_LENGTH
-
-
-def get_arguments():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--test', '-t', action='store_true',
-                        help='test_mode')
-    return parser.parse_args()
+from CONST import DEBUG_LENGTH
+from result import ResultHandler
 
 
 def preparation_logger():
@@ -45,6 +38,10 @@ if __name__ == '__main__':
     logger, sh = preparation_logger()
     logger.info('******************** start pipeline ********************')
 
+    # result dir
+    result = ResultHandler()
+
+    # ================== set params ================================
     params_xgb = {
         'objective': 'binary:logistic',
         'eval_metric': 'logloss',
@@ -60,11 +57,9 @@ if __name__ == '__main__':
         'early_stopping_rounds': 10,
     }
 
-    params_xgb_all = dict(params_xgb)
-    params_xgb_all['num_round'] = 30  # 350
-
     # 特徴量の指定
     feat_grps = ['FamilySize']
+    # ==============================================================
 
     # xgboostによる学習・予測
     runner = Runner('xgb1', ModelXGB, feat_grps, params_xgb)
