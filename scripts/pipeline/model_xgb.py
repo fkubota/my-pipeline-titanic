@@ -32,14 +32,17 @@ class ModelXGB(Model):
 
     def predict(self, te_x):
         dtest = xgb.DMatrix(te_x)
-        return self.model.predict(dtest, ntree_limit=self.model.best_ntree_limit)
+        return self.model.predict(dtest,
+                                  ntree_limit=self.model.best_ntree_limit)
 
     def save_model(self):
-        model_path = os.path.join('../model/model', f'{self.run_fold_name}.model')
+        model_path = os.path.join('../model/model',
+                                  f'{self.run_fold_name}.model')
         os.makedirs(os.path.dirname(model_path), exist_ok=True)
         # best_ntree_limitが消えるのを防ぐため、pickleで保存することとした
         Util.save(self.model, model_path)
 
     def load_model(self):
-        model_path = os.path.join('../model/model', f'{self.run_fold_name}.model')
+        model_path = os.path.join('../model/model',
+                                  f'{self.run_fold_name}.model')
         self.model = Util.load(model_path)

@@ -11,7 +11,6 @@ import logging
 import pickle
 sys.path.append('../utils')
 from CONST import MEMO_PATH, FEAT_DIR
-from util import Util
 
 
 # logger

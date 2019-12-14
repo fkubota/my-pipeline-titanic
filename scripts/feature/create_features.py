@@ -2,12 +2,13 @@ import sys
 import logging
 from base import Feature, generate_features
 sys.path.append('../utils')
-from CONST import LOG_DIR, DEBUG_LENGTH
+from CONST import LOG_DIR
 from util import Util
 
 
 def preparation_logger():
-    form = '%(asctime)s %(name)s line %(lineno)d [%(levelname)s][%(funcName)s] %(message)s'
+    form = '%(asctime)s %(name)s line %(lineno)d \
+            [%(levelname)s][%(funcName)s] %(message)s'
     formatter = logging.Formatter(form)
 
     logger = logging.getLogger('create_features')

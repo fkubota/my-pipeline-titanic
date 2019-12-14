@@ -1,6 +1,5 @@
-import sys
-import datetime
 import logging
+import datetime
 
 logger = logging.getLogger('result')
 logger.setLevel(logging.DEBUG)
@@ -8,12 +7,15 @@ logger.setLevel(logging.DEBUG)
 
 class ResultHandler:
 
-    def __inint__(self):
-        self.me = 'fkubota'
-        self.datetime = datetime.datetme.now()
+    def __init__(self, model_name):
+        self.now = datetime.datetime.now()
+        self.model_name = model_name
+        self.name = ''
+        self.create_name()
 
-    def show_date(self):
-        print(self.datetime)
+    def create_name(self):
+        now_form = "{0:%Y%m%d_%H%M%S}".format(self.now)
+        self.name = f'{now_form}_{self.model_name}'
 
 
 if __name__ == '__main__':
@@ -23,5 +25,5 @@ if __name__ == '__main__':
 
     # debug
     logger.debug('---- entry ----')
-    rh = ResultHandler
-    print(rh.me)
+    rh = ResultHandler('xgb')
+    print(rh.name)

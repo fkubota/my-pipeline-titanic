@@ -1,7 +1,7 @@
-import pandas as pd
-import numpy as np
 from abc import ABCMeta, abstractmethod
 from typing import Optional
+import pandas as pd
+import numpy as np
 
 
 class Model(metaclass=ABCMeta):
@@ -44,4 +44,3 @@ class Model(metaclass=ABCMeta):
     def load_model(self) -> None:
         """モデルの読み込みを行う"""
         pass
-

@@ -3,9 +3,10 @@ import numpy as np
 import pandas as pd
 import logging
 from model import Model
+from result import ResultHandler
 from sklearn.metrics import log_loss
 from sklearn.model_selection import StratifiedKFold
-from typing import Callable, List, Optional, Tuple, Union
+from typing import Callable, List, Tuple, Union
 sys.path.append('../utils')
 # from util import load_train_data, load_test_data
 from util import Util
@@ -19,16 +20,16 @@ load_data_logger.setLevel(logging.DEBUG)
 
 class Runner:
 
-    def __init__(self, run_name: str, model_cls: Callable[[str, dict], Model], feat_grps: List[str], params: dict):
+    def __init__(self, model_cls: Callable[[str, dict], Model],
+                 feat_grps: List[str], params: dict):
         """コンストラクタ
         :param run_name: ランの名前
         :param model_cls: モデルのクラス
         :param feat_grps: 特徴量グループ名
         :param params: ハイパーパラメータ
         """
-        self.run_name = run_name
         self.model_cls = model_cls
-        # self.features = features
+        self.result_hander = ResultHandler(model_cls.__name__)
         self.feat_grps = feat_grps
         self.params = params
         self.n_fold = 4
@@ -170,5 +171,6 @@ class Runner:
         # ここでは乱数を固定して毎回作成しているが、ファイルに保存する方法もある
         train_y = self.load_y_train()
         dummy_x = np.zeros(len(train_y))
-        skf = StratifiedKFold(n_splits=self.n_fold, shuffle=True, random_state=71)
+        skf = StratifiedKFold(n_splits=self.n_fold,
+                              shuffle=True, random_state=71)
         return list(skf.split(dummy_x, train_y))[i_fold]

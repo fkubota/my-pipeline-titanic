@@ -1,13 +1,11 @@
 import sys
-# import numpy as np
-# import pandas as pd
 from model_xgb import ModelXGB
 from runner import Runner
 import logging
+from result import ResultHandler
 # from util import Submission
 sys.path.append('../utils')
-from CONST import DEBUG_LENGTH
-from result import ResultHandler
+from util import Util
 
 
 def preparation_logger():
@@ -39,7 +37,7 @@ if __name__ == '__main__':
     logger.info('******************** start pipeline ********************')
 
     # result dir
-    result = ResultHandler()
+    # result = ResultHandler()
 
     # ================== set params ================================
     params_xgb = {
@@ -62,7 +60,7 @@ if __name__ == '__main__':
     # ==============================================================
 
     # xgboostによる学習・予測
-    runner = Runner('xgb1', ModelXGB, feat_grps, params_xgb)
+    runner = Runner(ModelXGB, feat_grps, params_xgb)
     runner.run_train_cv()
     runner.run_predict_cv()
     logger.info('******************** end pipeline ********************')
