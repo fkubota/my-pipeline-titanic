@@ -7,8 +7,7 @@ from util import Util
 
 
 def preparation_logger():
-    form = '%(asctime)s %(name)s line %(lineno)d \
-            [%(levelname)s][%(funcName)s] %(message)s'
+    form = '%(asctime)s %(name)s line %(lineno)d [%(levelname)s][%(funcName)s] %(message)s'
     formatter = logging.Formatter(form)
 
     logger = logging.getLogger('create_features')
@@ -22,7 +21,7 @@ def preparation_logger():
     sh.setFormatter(formatter)
 
     # ファイル出力
-    fh = logging.FileHandler(f'{LOG_DIR}/log.log')
+    fh = logging.FileHandler(f'{LOG_DIR}/feature/log.log')
     fh.setLevel(logging.DEBUG)
     fh.setFormatter(formatter)
 

@@ -1,0 +1,23 @@
+2019-12-14 17:55:05,367 run line76 [INFO][<module>] ******************** start pipeline ********************
+2019-12-14 17:55:05,367 runner line70 [INFO][run_train_cv] 20191214_175505_ModelXGB - start training cv
+2019-12-14 17:55:05,367 runner line79 [INFO][run_train_cv] 20191214_175505_ModelXGB fold 0 - start training
+2019-12-14 17:55:05,402 runner line81 [INFO][run_train_cv] 20191214_175505_ModelXGB fold 0 - end training - score 0.6587497357811246
+2019-12-14 17:55:05,402 runner line79 [INFO][run_train_cv] 20191214_175505_ModelXGB fold 1 - start training
+2019-12-14 17:55:05,442 runner line81 [INFO][run_train_cv] 20191214_175505_ModelXGB fold 1 - end training - score 0.6664849961442607
+2019-12-14 17:55:05,442 runner line79 [INFO][run_train_cv] 20191214_175505_ModelXGB fold 2 - start training
+2019-12-14 17:55:05,479 runner line81 [INFO][run_train_cv] 20191214_175505_ModelXGB fold 2 - end training - score 0.6521935257044705
+2019-12-14 17:55:05,479 runner line79 [INFO][run_train_cv] 20191214_175505_ModelXGB fold 3 - start training
+2019-12-14 17:55:05,514 runner line81 [INFO][run_train_cv] 20191214_175505_ModelXGB fold 3 - end training - score 0.6572732567787171
+2019-12-14 17:55:05,515 runner line97 [INFO][run_train_cv] 20191214_175505_ModelXGB - end training cv - score 0.6586753786021432
+2019-12-14 17:55:05,515 runner line109 [INFO][run_predict_cv] 20191214_175505_ModelXGB - start prediction cv
+2019-12-14 17:55:05,516 runner line117 [INFO][run_predict_cv] 20191214_175505_ModelXGB - start prediction fold:0
+2019-12-14 17:55:05,518 runner line122 [INFO][run_predict_cv] 20191214_175505_ModelXGB - end prediction fold:0
+2019-12-14 17:55:05,518 runner line117 [INFO][run_predict_cv] 20191214_175505_ModelXGB - start prediction fold:1
+2019-12-14 17:55:05,519 runner line122 [INFO][run_predict_cv] 20191214_175505_ModelXGB - end prediction fold:1
+2019-12-14 17:55:05,520 runner line117 [INFO][run_predict_cv] 20191214_175505_ModelXGB - start prediction fold:2
+2019-12-14 17:55:05,522 runner line122 [INFO][run_predict_cv] 20191214_175505_ModelXGB - end prediction fold:2
+2019-12-14 17:55:05,522 runner line117 [INFO][run_predict_cv] 20191214_175505_ModelXGB - start prediction fold:3
+2019-12-14 17:55:05,524 runner line122 [INFO][run_predict_cv] 20191214_175505_ModelXGB - end prediction fold:3
+2019-12-14 17:55:05,524 runner line130 [INFO][run_predict_cv] 20191214_175505_ModelXGB - end prediction cv
+2019-12-14 17:55:05,524 run line80 [INFO][<module>] ******************** end pipeline ********************
+2019-12-14 17:55:05,524 run line81 [DEBUG][<module>] this is debug

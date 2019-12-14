@@ -24,25 +24,19 @@ class Util:
 
     @classmethod
     def load_csv(cls, path):
-        logger.debug('enter')
         args = cls.get_arguments()
         df = pd.read_csv(path)
         df = df[:DEBUG_LENGTH] if args.debug else df[:DEBUG_LENGTH]
-        logger.debug('exit')
         return df
 
     @classmethod
     def load_train_data(cls):
-        logger.debug('enter')
         df = cls.load_csv(TRAIN_PATH)
-        logger.debug('exit')
         return df
 
     @classmethod
     def load_test_data(cls):
-        logger.debug('enter')
         df = cls.load_csv(TEST_PATH)
-        logger.debug('exit')
         return df
 
     @classmethod

@@ -21,7 +21,8 @@ load_data_logger.setLevel(logging.DEBUG)
 class Runner:
 
     def __init__(self, model_cls: Callable[[str, dict], Model],
-                 feat_grps: List[str], params: dict):
+                 feat_grps: List[str], params: dict,
+                 result_handler: ResultHandler):
         """コンストラクタ
         :param run_name: ランの名前
         :param model_cls: モデルのクラス
@@ -32,7 +33,7 @@ class Runner:
         self.feat_grps = feat_grps
         self.params = params
         self.n_fold = 4
-        self.result_handler = ResultHandler(model_cls.__name__)
+        self.result_handler = result_handler
         self.run_name = self.result_handler.name
 
     def train_fold(self, i_fold: int) -> Tuple[
@@ -113,12 +114,12 @@ class Runner:
 
         # 各foldのモデルで予測を行う
         for i_fold in range(self.n_fold):
-            logger.info(f'{self.run_name} - start prediction fold:{i_fold}')
+            # logger.info(f'{self.run_name} - start prediction fold:{i_fold}')
             model = self.build_model(i_fold)
             model.load_model(self.result_handler.result_dir)
             pred = model.predict(test_x)
             preds.append(pred)
-            logger.info(f'{self.run_name} - end prediction fold:{i_fold}')
+            # logger.info(f'{self.run_name} - end prediction fold:{i_fold}')
 
         # 予測の平均値を出力する
         pred_avg = np.mean(preds, axis=0)

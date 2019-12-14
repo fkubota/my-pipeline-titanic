@@ -1,0 +1,54 @@
+******************** start pipeline ********************
+20191214_172403_ModelXGB - start training cv
+20191214_172403_ModelXGB fold 0 - start training
+enter
+enter
+exit
+exit
+enter
+enter
+exit
+exit
+20191214_172403_ModelXGB fold 0 - end training - score 0.6587497357811246
+20191214_172403_ModelXGB fold 1 - start training
+enter
+enter
+exit
+exit
+enter
+enter
+exit
+exit
+20191214_172403_ModelXGB fold 1 - end training - score 0.6664849961442607
+20191214_172403_ModelXGB fold 2 - start training
+enter
+enter
+exit
+exit
+enter
+enter
+exit
+exit
+20191214_172403_ModelXGB fold 2 - end training - score 0.6521935257044705
+20191214_172403_ModelXGB fold 3 - start training
+enter
+enter
+exit
+exit
+enter
+enter
+exit
+exit
+20191214_172403_ModelXGB fold 3 - end training - score 0.6572732567787171
+20191214_172403_ModelXGB - end training cv - score 0.6586753786021432
+20191214_172403_ModelXGB - start prediction cv
+20191214_172403_ModelXGB - start prediction fold:0
+20191214_172403_ModelXGB - end prediction fold:0
+20191214_172403_ModelXGB - start prediction fold:1
+20191214_172403_ModelXGB - end prediction fold:1
+20191214_172403_ModelXGB - start prediction fold:2
+20191214_172403_ModelXGB - end prediction fold:2
+20191214_172403_ModelXGB - start prediction fold:3
+20191214_172403_ModelXGB - end prediction fold:3
+20191214_172403_ModelXGB - end prediction cv
+******************** end pipeline ********************

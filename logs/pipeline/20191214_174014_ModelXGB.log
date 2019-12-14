@@ -1,0 +1,13 @@
+******************** start pipeline ********************
+20191214_174014_ModelXGB - start training cv
+20191214_174014_ModelXGB fold 0 - start training
+20191214_174014_ModelXGB fold 0 - end training - score 0.6587497357811246
+20191214_174014_ModelXGB fold 1 - start training
+20191214_174014_ModelXGB fold 1 - end training - score 0.6664849961442607
+20191214_174014_ModelXGB fold 2 - start training
+20191214_174014_ModelXGB fold 2 - end training - score 0.6521935257044705
+20191214_174014_ModelXGB fold 3 - start training
+20191214_174014_ModelXGB fold 3 - end training - score 0.6572732567787171
+20191214_174014_ModelXGB - end training cv - score 0.6586753786021432
+20191214_174014_ModelXGB - start prediction cv
+20191214_174014_ModelXGB - start prediction fold:0
