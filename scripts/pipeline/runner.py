@@ -29,10 +29,11 @@ class Runner:
         :param params: ハイパーパラメータ
         """
         self.model_cls = model_cls
-        self.result_hander = ResultHandler(model_cls.__name__)
         self.feat_grps = feat_grps
         self.params = params
         self.n_fold = 4
+        self.result_handler = ResultHandler(model_cls.__name__)
+        self.run_name = self.result_handler.name
 
     def train_fold(self, i_fold: int) -> Tuple[
             Model, np.array, np.array, float]:
@@ -79,7 +80,7 @@ class Runner:
             logger.info(f'{self.run_name} fold {i_fold} - end training - score {score}')
 
             # モデルを保存する
-            model.save_model()
+            model.save_model(self.result_handler.result_dir)
 
             # 結果を保持する
             va_idxes.append(va_idx)
@@ -114,7 +115,7 @@ class Runner:
         for i_fold in range(self.n_fold):
             logger.info(f'{self.run_name} - start prediction fold:{i_fold}')
             model = self.build_model(i_fold)
-            model.load_model()
+            model.load_model(self.result_handler.result_dir)
             pred = model.predict(test_x)
             preds.append(pred)
             logger.info(f'{self.run_name} - end prediction fold:{i_fold}')
@@ -133,7 +134,7 @@ class Runner:
         :return: モデルのインスタンス
         """
         # ラン名、fold、モデルのクラスからモデルを作成する
-        run_fold_name = f'{self.run_name}-{i_fold}'
+        run_fold_name = f'{self.run_name}_model-{i_fold}'
         return self.model_cls(run_fold_name, self.params)
 
     def load_x_train(self) -> pd.DataFrame:

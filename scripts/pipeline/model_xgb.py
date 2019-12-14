@@ -1,5 +1,4 @@
 import sys
-import os
 import xgboost as xgb
 from model import Model
 sys.path.append('../utils')
@@ -35,14 +34,10 @@ class ModelXGB(Model):
         return self.model.predict(dtest,
                                   ntree_limit=self.model.best_ntree_limit)
 
-    def save_model(self):
-        model_path = os.path.join('../model/model',
-                                  f'{self.run_fold_name}.model')
-        os.makedirs(os.path.dirname(model_path), exist_ok=True)
-        # best_ntree_limitが消えるのを防ぐため、pickleで保存することとした
-        Util.save(self.model, model_path)
+    def save_model(self, save_dir):
+        save_path = f'{save_dir}/{self.run_fold_name}.pkl'
+        Util.save(self.model, save_path)
 
-    def load_model(self):
-        model_path = os.path.join('../model/model',
-                                  f'{self.run_fold_name}.model')
-        self.model = Util.load(model_path)
+    def load_model(self, save_dir):
+        load_path = f'{save_dir}/{self.run_fold_name}.pkl'
+        self.model = Util.load(load_path)
