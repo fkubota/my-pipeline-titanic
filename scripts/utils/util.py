@@ -4,7 +4,8 @@ import json
 import pandas as pd
 import argparse
 from logging import getLogger
-from CONST import TRAIN_PATH, TEST_PATH, FEAT_DIR, DEBUG_LENGTH
+from CONST import TRAIN_PATH, TEST_PATH
+from CONST import FEAT_DIR, DEBUG_LENGTH, SUBMISSION_PATH
 
 logger = getLogger('util')
 
@@ -27,7 +28,8 @@ class Util:
     def load_csv(cls, path):
         args = cls.get_arguments()
         df = pd.read_csv(path)
-        df = df[:DEBUG_LENGTH] if args.debug else df[:DEBUG_LENGTH]
+        # df = df[:DEBUG_LENGTH] if args.debug else df[:DEBUG_LENGTH]
+        df = df[:DEBUG_LENGTH] if args.debug else df
         return df
 
     @classmethod
@@ -69,6 +71,23 @@ class Util:
         os.makedirs(os.path.dirname(path), exist_ok=True)
         file_ = open(path, 'w')
         json.dump(data, file_, indent=4)
+
+    @classmethod
+    def save_oof(cls, data, save_dir):
+        oof = cls.load_train_data() # ['PassengerId', 'Survived']
+        oof = oof[['PassengerId', 'Survived']]
+        name = save_dir.split('/')[-1]
+        path = f'{save_dir}/{name}_oof.csv'
+        oof['Survived'] = data
+        oof.to_csv(path, index=False, encoding='utf-8')
+
+    @classmethod
+    def save_submission(cls, data, save_dir):
+        submission = pd.read_csv(SUBMISSION_PATH)
+        submission['Survived'] = data
+        name = save_dir.split('/')[-1]
+        path = f'{save_dir}/{name}_submission.csv'
+        submission.to_csv(path, index=False, encoding='utf-8')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,19 @@
+2019-12-15 16:39:30,173 run line53 [INFO][run] ******************** start pipeline ********************
+2019-12-15 16:39:30,173 runner line75 [INFO][run_train_cv] 20191215_163930_ModelXGB - start training cv
+2019-12-15 16:39:30,174 runner line84 [INFO][run_train_cv] 20191215_163930_ModelXGB fold 0 - start training
+2019-12-15 16:39:30,208 runner line86 [INFO][run_train_cv] 20191215_163930_ModelXGB fold 0 - end training - score {score}
+2019-12-15 16:39:30,208 runner line84 [INFO][run_train_cv] 20191215_163930_ModelXGB fold 1 - start training
+2019-12-15 16:39:30,240 runner line86 [INFO][run_train_cv] 20191215_163930_ModelXGB fold 1 - end training - score {score}
+2019-12-15 16:39:30,241 runner line84 [INFO][run_train_cv] 20191215_163930_ModelXGB fold 2 - start training
+2019-12-15 16:39:30,276 runner line86 [INFO][run_train_cv] 20191215_163930_ModelXGB fold 2 - end training - score {score}
+2019-12-15 16:39:30,277 runner line84 [INFO][run_train_cv] 20191215_163930_ModelXGB fold 3 - start training
+2019-12-15 16:39:30,309 runner line86 [INFO][run_train_cv] 20191215_163930_ModelXGB fold 3 - end training - score {score}
+2019-12-15 16:39:30,310 runner line103 [INFO][run_train_cv] 20191215_163930_ModelXGB - end training cv - score 0.6586753786021432
+2019-12-15 16:39:30,310 runner line115 [INFO][run_predict_cv] 20191215_163930_ModelXGB - start prediction cv
+2019-12-15 16:39:30,313 runner line128 [INFO][run_predict_cv] 20191215_163930_ModelXGB- end prediction fold:{i_fold}/{self.n_fold-1}
+2019-12-15 16:39:30,315 runner line128 [INFO][run_predict_cv] 20191215_163930_ModelXGB- end prediction fold:{i_fold}/{self.n_fold-1}
+2019-12-15 16:39:30,317 runner line128 [INFO][run_predict_cv] 20191215_163930_ModelXGB- end prediction fold:{i_fold}/{self.n_fold-1}
+2019-12-15 16:39:30,319 runner line128 [INFO][run_predict_cv] 20191215_163930_ModelXGB- end prediction fold:{i_fold}/{self.n_fold-1}
+2019-12-15 16:39:30,319 runner line135 [ERROR][run_predict_cv] 222
+2019-12-15 16:39:30,321 util line77 [ERROR][create_submission] 222
+2019-12-15 16:39:30,321 util line78 [ERROR][create_submission] 418

@@ -1,0 +1,18 @@
+2019-12-15 17:37:24,976 run line54 [INFO][run] ******************** start pipeline ********************
+2019-12-15 17:37:24,980 runner line75 [INFO][run_train_cv] 20191215_173724_ModelXGB - start training cv
+2019-12-15 17:37:24,981 runner line84 [INFO][run_train_cv] 20191215_173724_ModelXGB fold 0 - start training
+2019-12-15 17:37:25,079 runner line86 [INFO][run_train_cv] 20191215_173724_ModelXGB fold 0 - end training - score 0.6431673342095954
+2019-12-15 17:37:25,080 runner line84 [INFO][run_train_cv] 20191215_173724_ModelXGB fold 1 - start training
+2019-12-15 17:37:25,123 runner line86 [INFO][run_train_cv] 20191215_173724_ModelXGB fold 1 - end training - score 0.6594854042669048
+2019-12-15 17:37:25,124 runner line84 [INFO][run_train_cv] 20191215_173724_ModelXGB fold 2 - start training
+2019-12-15 17:37:25,162 runner line86 [INFO][run_train_cv] 20191215_173724_ModelXGB fold 2 - end training - score 0.6167053186947161
+2019-12-15 17:37:25,162 runner line84 [INFO][run_train_cv] 20191215_173724_ModelXGB fold 3 - start training
+2019-12-15 17:37:25,197 runner line86 [INFO][run_train_cv] 20191215_173724_ModelXGB fold 3 - end training - score 0.6443290111717878
+2019-12-15 17:37:25,198 runner line103 [INFO][run_train_cv] 20191215_173724_ModelXGB - end training cv - score 0.640921767085751
+2019-12-15 17:37:25,216 runner line116 [INFO][run_predict_cv] 20191215_173724_ModelXGB - start prediction cv
+2019-12-15 17:37:25,262 runner line129 [INFO][run_predict_cv] 20191215_173724_ModelXGB- end prediction fold:0/3
+2019-12-15 17:37:25,288 runner line129 [INFO][run_predict_cv] 20191215_173724_ModelXGB- end prediction fold:1/3
+2019-12-15 17:37:25,293 runner line129 [INFO][run_predict_cv] 20191215_173724_ModelXGB- end prediction fold:2/3
+2019-12-15 17:37:25,295 runner line129 [INFO][run_predict_cv] 20191215_173724_ModelXGB- end prediction fold:3/3
+2019-12-15 17:37:25,300 runner line138 [INFO][run_predict_cv] 20191215_173724_ModelXGB - end prediction cv
+2019-12-15 17:37:25,301 run line58 [INFO][run] ******************** end pipeline ********************

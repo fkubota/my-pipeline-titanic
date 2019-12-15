@@ -1,0 +1,24 @@
+2019-12-15 17:49:02,024 run line54 [INFO][run] ******************** start pipeline ********************
+2019-12-15 17:49:02,024 runner line75 [INFO][run_train_cv] 20191215_174902_ModelXGB - start training cv
+2019-12-15 17:49:02,024 runner line84 [INFO][run_train_cv] 20191215_174902_ModelXGB fold 0 - start training
+2019-12-15 17:49:02,061 runner line86 [INFO][run_train_cv] 20191215_174902_ModelXGB fold 0 - end training - score 0.6431673342095954
+2019-12-15 17:49:02,062 runner line84 [INFO][run_train_cv] 20191215_174902_ModelXGB fold 1 - start training
+2019-12-15 17:49:02,097 runner line86 [INFO][run_train_cv] 20191215_174902_ModelXGB fold 1 - end training - score 0.6594854042669048
+2019-12-15 17:49:02,097 runner line84 [INFO][run_train_cv] 20191215_174902_ModelXGB fold 2 - start training
+2019-12-15 17:49:02,134 runner line86 [INFO][run_train_cv] 20191215_174902_ModelXGB fold 2 - end training - score 0.6167053186947161
+2019-12-15 17:49:02,134 runner line84 [INFO][run_train_cv] 20191215_174902_ModelXGB fold 3 - start training
+2019-12-15 17:49:02,169 runner line86 [INFO][run_train_cv] 20191215_174902_ModelXGB fold 3 - end training - score 0.6443290111717878
+2019-12-15 17:49:02,170 runner line103 [INFO][run_train_cv] 20191215_174902_ModelXGB - end training cv - score 0.640921767085751
+2019-12-15 17:49:02,175 util line79 [INFO][save_oof] 0    1
+1    2
+2    3
+3    4
+4    5
+Name: PassengerId, dtype: int64
+2019-12-15 17:49:02,186 runner line116 [INFO][run_predict_cv] 20191215_174902_ModelXGB - start prediction cv
+2019-12-15 17:49:02,188 runner line129 [INFO][run_predict_cv] 20191215_174902_ModelXGB- end prediction fold:0/3
+2019-12-15 17:49:02,189 runner line129 [INFO][run_predict_cv] 20191215_174902_ModelXGB- end prediction fold:1/3
+2019-12-15 17:49:02,194 runner line129 [INFO][run_predict_cv] 20191215_174902_ModelXGB- end prediction fold:2/3
+2019-12-15 17:49:02,196 runner line129 [INFO][run_predict_cv] 20191215_174902_ModelXGB- end prediction fold:3/3
+2019-12-15 17:49:02,200 runner line138 [INFO][run_predict_cv] 20191215_174902_ModelXGB - end prediction cv
+2019-12-15 17:49:02,200 run line58 [INFO][run] ******************** end pipeline ********************

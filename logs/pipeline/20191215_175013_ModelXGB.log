@@ -1,0 +1,24 @@
+2019-12-15 17:50:13,691 run line54 [INFO][run] ******************** start pipeline ********************
+2019-12-15 17:50:13,692 runner line75 [INFO][run_train_cv] 20191215_175013_ModelXGB - start training cv
+2019-12-15 17:50:13,692 runner line84 [INFO][run_train_cv] 20191215_175013_ModelXGB fold 0 - start training
+2019-12-15 17:50:13,733 runner line86 [INFO][run_train_cv] 20191215_175013_ModelXGB fold 0 - end training - score 0.6431673342095954
+2019-12-15 17:50:13,734 runner line84 [INFO][run_train_cv] 20191215_175013_ModelXGB fold 1 - start training
+2019-12-15 17:50:13,770 runner line86 [INFO][run_train_cv] 20191215_175013_ModelXGB fold 1 - end training - score 0.6594854042669048
+2019-12-15 17:50:13,770 runner line84 [INFO][run_train_cv] 20191215_175013_ModelXGB fold 2 - start training
+2019-12-15 17:50:13,804 runner line86 [INFO][run_train_cv] 20191215_175013_ModelXGB fold 2 - end training - score 0.6167053186947161
+2019-12-15 17:50:13,804 runner line84 [INFO][run_train_cv] 20191215_175013_ModelXGB fold 3 - start training
+2019-12-15 17:50:13,837 runner line86 [INFO][run_train_cv] 20191215_175013_ModelXGB fold 3 - end training - score 0.6443290111717878
+2019-12-15 17:50:13,838 runner line103 [INFO][run_train_cv] 20191215_175013_ModelXGB - end training cv - score 0.640921767085751
+2019-12-15 17:50:13,844 util line79 [INFO][save_oof]    PassengerId  Survived
+0            1         0
+1            2         1
+2            3         1
+3            4         1
+4            5         0
+2019-12-15 17:50:13,856 runner line116 [INFO][run_predict_cv] 20191215_175013_ModelXGB - start prediction cv
+2019-12-15 17:50:13,859 runner line129 [INFO][run_predict_cv] 20191215_175013_ModelXGB- end prediction fold:0/3
+2019-12-15 17:50:13,861 runner line129 [INFO][run_predict_cv] 20191215_175013_ModelXGB- end prediction fold:1/3
+2019-12-15 17:50:13,863 runner line129 [INFO][run_predict_cv] 20191215_175013_ModelXGB- end prediction fold:2/3
+2019-12-15 17:50:13,865 runner line129 [INFO][run_predict_cv] 20191215_175013_ModelXGB- end prediction fold:3/3
+2019-12-15 17:50:13,869 runner line138 [INFO][run_predict_cv] 20191215_175013_ModelXGB - end prediction cv
+2019-12-15 17:50:13,870 run line58 [INFO][run] ******************** end pipeline ********************

@@ -8,8 +8,8 @@ from sklearn.metrics import log_loss
 from sklearn.model_selection import StratifiedKFold
 from typing import Callable, List, Tuple, Union
 sys.path.append('../utils')
-# from util import load_train_data, load_test_data
 from util import Util
+
 
 # logger
 logger = logging.getLogger('runner')
@@ -84,7 +84,7 @@ class Runner:
             logger.info(f'{self.run_name} fold {i_fold} - start training')
             model, va_idx, va_pred, score = self.train_fold(i_fold)
             logger.info(f'{self.run_name} fold {i_fold}'
-                        ' - end training - score {score}')
+                        f' - end training - score {score}')
 
             # モデルを保存する
             model.save_model(self.result_handler.result_dir)
@@ -100,10 +100,11 @@ class Runner:
         preds = np.concatenate(preds, axis=0)
         preds = preds[order]
 
-        logger.info(f'{self.run_name} - end training cv - score {np.mean(scores)}')
+        logger.info(f'{self.run_name}'
+                    f' - end training cv - score {np.mean(scores)}')
 
-        # 予測結果の保存
-        # Util.dump(preds, f'../model/pred/{self.run_name}-train.pkl')
+        # oofの保存
+        Util.save_oof(preds, self.result_handler.result_dir)
 
         # 評価結果の保存
         # logger.result_scores(self.run_name, scores)
@@ -125,13 +126,14 @@ class Runner:
             model.load_model(self.result_handler.result_dir)
             pred = model.predict(test_x)
             preds.append(pred)
-            # logger.info(f'{self.run_name} - end prediction fold:{i_fold}')
+            logger.info(f'{self.run_name}'
+                        f'- end prediction fold:{i_fold}/{self.n_fold-1}')
 
         # 予測の平均値を出力する
         pred_avg = np.mean(preds, axis=0)
 
         # 予測結果の保存
-        # Util.dump(pred_avg, f'../model/pred/{self.run_name}-test.pkl')
+        Util.save_submission(pred_avg, self.result_handler.result_dir)
 
         logger.info(f'{self.run_name} - end prediction cv')
 
@@ -159,7 +161,6 @@ class Runner:
         """
         # 目的変数の読込を行う
         train_y = Util.load_train_data()['Survived']
-        # train_y = np.array([int(st[-1]) for st in train_y]) - 1
         train_y = pd.Series(train_y)
         return train_y
 
@@ -167,7 +168,6 @@ class Runner:
         """テストデータの特徴量を読み込む
         :return: テストデータの特徴量
         """
-        # return Util.load_test_data()[self.features]
         return Util.load_test_features(self.feat_grps)
 
     def load_index_fold(self, i_fold: int) -> np.array:

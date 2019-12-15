@@ -47,6 +47,7 @@ def preparation_logger(log_name):
 
     return logger, sh
 
+
 def run(model, n_fold, feat_grps, model_params):
     rh = ResultHandler(model.__name__)
     logger, sh = preparation_logger(rh.name)
