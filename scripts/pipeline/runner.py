@@ -84,10 +84,11 @@ class Runner:
             logger.info(f'{self.run_name} fold {i_fold} - start training')
             model, va_idx, va_pred, score = self.train_fold(i_fold)
             logger.info(f'{self.run_name} fold {i_fold}'
-                        f' - end training - score {score}')
+                        f' - end training - score {score:.4f}')
 
             # モデルを保存する
             model.save_model(self.result_handler.result_dir)
+            logger.debug(f'save model {i_fold}')
 
             # 結果を保持する
             va_idxes.append(va_idx)
@@ -100,8 +101,9 @@ class Runner:
         preds = np.concatenate(preds, axis=0)
         preds = preds[order]
 
-        logger.info(f'{self.run_name}'
-                    f' - end training cv - score {np.mean(scores)}')
+        logger.info(f'{self.run_name} - end training cv'
+                    f' - oof score mean:{np.mean(scores):.4f}, '
+                    f'std:{np.std(scores):.4f}')
 
         # oofの保存
         Util.save_oof(preds, self.result_handler.result_dir)

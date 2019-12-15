@@ -1,0 +1,22 @@
+2019-12-15 18:05:02,041 run line54 [INFO][run] ******************** start pipeline ********************
+2019-12-15 18:05:02,041 runner line75 [INFO][run_train_cv] 20191215_180502_ModelXGB - start training cv
+2019-12-15 18:05:02,041 runner line84 [INFO][run_train_cv] 20191215_180502_ModelXGB fold 0 - start training
+2019-12-15 18:05:02,093 runner line86 [INFO][run_train_cv] 20191215_180502_ModelXGB fold 0 - end training - score 0.6431673342095954
+2019-12-15 18:05:02,093 runner line91 [DEBUG][run_train_cv] save model 0
+2019-12-15 18:05:02,094 runner line84 [INFO][run_train_cv] 20191215_180502_ModelXGB fold 1 - start training
+2019-12-15 18:05:02,126 runner line86 [INFO][run_train_cv] 20191215_180502_ModelXGB fold 1 - end training - score 0.6594854042669048
+2019-12-15 18:05:02,126 runner line91 [DEBUG][run_train_cv] save model 1
+2019-12-15 18:05:02,126 runner line84 [INFO][run_train_cv] 20191215_180502_ModelXGB fold 2 - start training
+2019-12-15 18:05:02,157 runner line86 [INFO][run_train_cv] 20191215_180502_ModelXGB fold 2 - end training - score 0.6167053186947161
+2019-12-15 18:05:02,158 runner line91 [DEBUG][run_train_cv] save model 2
+2019-12-15 18:05:02,158 runner line84 [INFO][run_train_cv] 20191215_180502_ModelXGB fold 3 - start training
+2019-12-15 18:05:02,191 runner line86 [INFO][run_train_cv] 20191215_180502_ModelXGB fold 3 - end training - score 0.6443290111717878
+2019-12-15 18:05:02,192 runner line91 [DEBUG][run_train_cv] save model 3
+2019-12-15 18:05:02,192 runner line104 [INFO][run_train_cv] 20191215_180502_ModelXGB - end training cv - score mean:0.6409, std:0.0154
+2019-12-15 18:05:02,200 runner line118 [INFO][run_predict_cv] 20191215_180502_ModelXGB - start prediction cv
+2019-12-15 18:05:02,203 runner line131 [INFO][run_predict_cv] 20191215_180502_ModelXGB- end prediction fold:0/3
+2019-12-15 18:05:02,207 runner line131 [INFO][run_predict_cv] 20191215_180502_ModelXGB- end prediction fold:1/3
+2019-12-15 18:05:02,209 runner line131 [INFO][run_predict_cv] 20191215_180502_ModelXGB- end prediction fold:2/3
+2019-12-15 18:05:02,211 runner line131 [INFO][run_predict_cv] 20191215_180502_ModelXGB- end prediction fold:3/3
+2019-12-15 18:05:02,215 runner line140 [INFO][run_predict_cv] 20191215_180502_ModelXGB - end prediction cv
+2019-12-15 18:05:02,216 run line58 [INFO][run] ******************** end pipeline ********************
