@@ -1,5 +1,6 @@
 import os
 import pickle
+import json
 import pandas as pd
 import argparse
 from logging import getLogger
@@ -60,6 +61,14 @@ class Util:
         parser.add_argument('--debug', '-d', action='store_true',
                             help='debug mode')
         return parser.parse_args()
+
+    @classmethod
+    def save_params(cls, data, save_dir):
+        name = save_dir.split('/')[-1]
+        path = f'{save_dir}/{name}.json'
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        file_ = open(path, 'w')
+        json.dump(data, file_, indent=4)
 
 
 if __name__ == '__main__':

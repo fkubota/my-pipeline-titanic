@@ -33,6 +33,7 @@ def preparation_logger(log_name):
     runner_logger.addHandler(sh)
     util_logger.addHandler(sh)
 
+    # debug?
     if args.debug:
         sh.setLevel(logging.DEBUG)
     else:
@@ -46,10 +47,26 @@ def preparation_logger(log_name):
 
     return logger, sh
 
+def run(model, n_fold, feat_grps, model_params):
+    rh = ResultHandler(model.__name__)
+    logger, sh = preparation_logger(rh.name)
+    logger.info('******************** start pipeline ********************')
+    runner = Runner(model, n_fold, feat_grps, model_params, rh)
+    runner.run_train_cv()
+    runner.run_predict_cv()
+    logger.info('******************** end pipeline ********************')
+
 
 if __name__ == '__main__':
 
     # ================== set params ================================
+    # run param
+    n_fold = 4
+
+    # 特徴量の指定
+    feat_grps = ['FamilySize']
+
+    # xgb pram
     params_xgb = {
         'objective': 'binary:logistic',
         'eval_metric': 'logloss',
@@ -65,18 +82,13 @@ if __name__ == '__main__':
         'early_stopping_rounds': 10,
     }
 
-    # 特徴量の指定
-    feat_grps = ['FamilySize']
     # ==============================================================
 
     # xgboostによる学習・予測
     model = ModelXGB
-    rh = ResultHandler(model.__name__)
-    logger, sh = preparation_logger(rh.name)
-    logger.info('******************** start pipeline ********************')
-    runner = Runner(model, feat_grps, params_xgb, rh)
-    runner.run_train_cv()
-    runner.run_predict_cv()
-    logger.info('******************** end pipeline ********************')
-    logger.debug('this is debug')
-    # Submission.create_submission('xgb1')
+    run(model=ModelXGB,
+        n_fold=n_fold,
+        feat_grps=feat_grps,
+        model_params=params_xgb
+        )
+# Submission.create_submission('xgb1')

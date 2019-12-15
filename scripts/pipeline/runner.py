@@ -21,7 +21,9 @@ load_data_logger.setLevel(logging.DEBUG)
 class Runner:
 
     def __init__(self, model_cls: Callable[[str, dict], Model],
-                 feat_grps: List[str], params: dict,
+                 n_fold: int,
+                 feat_grps: List[str],
+                 params: dict,
                  result_handler: ResultHandler):
         """コンストラクタ
         :param run_name: ランの名前
@@ -32,9 +34,12 @@ class Runner:
         self.model_cls = model_cls
         self.feat_grps = feat_grps
         self.params = params
-        self.n_fold = 4
+        self.n_fold = n_fold
         self.result_handler = result_handler
         self.run_name = self.result_handler.name
+
+        # save_params
+        self.save_run_params()
 
     def train_fold(self, i_fold: int) -> Tuple[
             Model, np.array, np.array, float]:
@@ -78,7 +83,8 @@ class Runner:
             # 学習を行う
             logger.info(f'{self.run_name} fold {i_fold} - start training')
             model, va_idx, va_pred, score = self.train_fold(i_fold)
-            logger.info(f'{self.run_name} fold {i_fold} - end training - score {score}')
+            logger.info(f'{self.run_name} fold {i_fold}'
+                        ' - end training - score {score}')
 
             # モデルを保存する
             model.save_model(self.result_handler.result_dir)
@@ -176,3 +182,11 @@ class Runner:
         skf = StratifiedKFold(n_splits=self.n_fold,
                               shuffle=True, random_state=71)
         return list(skf.split(dummy_x, train_y))[i_fold]
+
+    def save_run_params(self):
+        params = {
+                  'n_fold': self.n_fold,
+                  'feat_grps': self.feat_grps,
+                  'model_params': self.params
+                  }
+        Util.save_params(params, self.result_handler.result_dir)
