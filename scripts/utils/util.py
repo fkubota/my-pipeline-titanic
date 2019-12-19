@@ -1,4 +1,5 @@
 import os
+import itertools
 import pickle
 import json
 import pandas as pd
@@ -74,7 +75,7 @@ class Util:
 
     @classmethod
     def save_oof(cls, data, save_dir):
-        oof = cls.load_train_data() # ['PassengerId', 'Survived']
+        oof = cls.load_train_data()  # ['PassengerId', 'Survived']
         oof = oof[['PassengerId', 'Survived']]
         name = save_dir.split('/')[-1]
         path = f'{save_dir}/{name}_oof.csv'
@@ -88,6 +89,26 @@ class Util:
         name = save_dir.split('/')[-1]
         path = f'{save_dir}/{name}_submission.csv'
         submission.to_csv(path, index=False, encoding='utf-8')
+
+    @classmethod
+    def parse_dict_param(cls, dict_param):
+        keys = list(dict_param.keys())
+
+        # param がリストの場合、その分だけグリッドを作る
+        params_list = []
+        for key in keys:
+            val = [dict_param[key]] if type(dict_param[key]) \
+                                    != list else dict_param[key]
+            params_list.append(val)
+
+        p = itertools.product(*params_list)
+        dict_param_list = []
+        for a in p:
+            param_dict = {}
+            for i, val in enumerate(a):
+                param_dict[keys[i]] = val
+            dict_param_list.append(param_dict)
+        return dict_param_list
 
 
 if __name__ == '__main__':
