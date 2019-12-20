@@ -1,0 +1,20 @@
+{
+    "n_fold": 4,
+    "feat_grps": [
+        "FamilySize"
+    ],
+    "model_params": {
+        "objective": "binary:logistic",
+        "eval_metric": "logloss",
+        "num_class": 1,
+        "max_depth": 10,
+        "eta": 0.1,
+        "min_child_weight": 10,
+        "subsample": 0.9,
+        "colsample_bytree": 0.8,
+        "silent": 1,
+        "random_state": 71,
+        "num_round": 10,
+        "early_stopping_rounds": 10
+    }
+}
