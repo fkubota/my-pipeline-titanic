@@ -15,6 +15,7 @@ def preparation_logger(log_name):
            '[%(levelname)s][%(funcName)s] %(message)s'
     formatter = logging.Formatter(form)
 
+    # logger 初期化
     logger = logging.getLogger('run')
     runner_logger = logging.getLogger('runner')
     util_logger = logging.getLogger('util')
@@ -67,7 +68,7 @@ if __name__ == '__main__':
 
     # ================== set params ================================
     # run param
-    n_fold = 4
+    n_fold = 2
 
     # 特徴量の指定
     feat_grps = ['FamilySize', 'Age_', 'Fare_', 'Sex_']
@@ -86,7 +87,11 @@ if __name__ == '__main__':
         'random_state': 71,
         'verbosity': 2,
         'verbose': 10,
+<<<<<<< HEAD
         'num_round': 100,
+=======
+        'num_round': 10,
+>>>>>>> 4f8910777636306511d40ee99ad61d1c485d5698
         'early_stopping_rounds': 100,
     }
 
