@@ -3944,3 +3944,409 @@ test
 4   Mrs
 2019-12-15 17:01:56,676 base line 133 [INFO][save]  ===== finish Title =====
 2019-12-15 17:01:56,676 create_features line 81 [INFO][<module>] -------------------- end
+2019-12-26 08:53:11,031 create_features line 98 [INFO][<module>] -------------------- start
+2019-12-26 08:53:11,043 create_features line 99 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 08:53:11,054 create_features line 100 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 08:53:11,055 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 08:53:11,055 base line 34 [INFO][generate_features] skip Title
+2019-12-26 08:53:11,056 base line 78 [INFO][check_meta] check_meta ... ok
+2019-12-26 08:53:11,060 base line 87 [DEBUG][create_memo] exists
+2019-12-26 08:53:11,063 base line 113 [INFO][create_memo] memo: fare, 欠損値は、平均で埋めた
+2019-12-26 08:53:11,067 base line 114 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+0  2019-12-15 17:01:56.637306  FamilySize  n_person in family
+1  2019-12-15 17:01:56.658391       Title    敬称(Ms, Masterとか)
+0  2019-12-26 08:53:11.056104        Fare   fare, 欠損値は、平均で埋めた
+2019-12-26 08:53:11,070 base line 127 [DEBUG][save] save path=../../data/feature/Fare_train.pkl
+2019-12-26 08:53:11,070 base line 128 [DEBUG][save] save path=../../data/feature/Fare_test.pkl
+2019-12-26 08:53:11,070 base line 129 [DEBUG][save] train feat size=(891, 1)
+2019-12-26 08:53:11,070 base line 130 [DEBUG][save] test  feat size=(418, 1)
+2019-12-26 08:53:11,072 base line 131 [DEBUG][save] 
+train 
+      fare
+0   7.2500
+1  71.2833
+2   7.9250
+3  53.1000
+4   8.0500
+2019-12-26 08:53:11,074 base line 132 [DEBUG][save] 
+test 
+      fare
+0   7.8292
+1   7.0000
+2   9.6875
+3   8.6625
+4  12.2875
+2019-12-26 08:53:11,074 base line 133 [INFO][save]  ===== finish Fare =====
+2019-12-26 08:53:11,075 create_features line 102 [INFO][<module>] -------------------- end
+2019-12-26 08:54:58,473 create_features line 98 [INFO][<module>] -------------------- start
+2019-12-26 08:54:58,484 create_features line 99 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 08:54:58,500 create_features line 100 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 08:54:58,501 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 08:54:58,501 base line 34 [INFO][generate_features] skip Title
+2019-12-26 08:54:58,502 base line 34 [INFO][generate_features] skip Fare
+2019-12-26 08:54:58,502 create_features line 102 [INFO][<module>] -------------------- end
+2019-12-26 08:55:22,979 create_features line 99 [INFO][<module>] -------------------- start
+2019-12-26 08:55:22,990 create_features line 100 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 08:55:23,005 create_features line 101 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 08:55:23,006 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 08:55:23,006 base line 34 [INFO][generate_features] skip Title
+2019-12-26 08:55:23,007 base line 34 [INFO][generate_features] skip Fare
+2019-12-26 08:55:23,008 base line 78 [INFO][check_meta] check_meta ... ok
+2019-12-26 08:55:47,864 create_features line 99 [INFO][<module>] -------------------- start
+2019-12-26 08:55:47,875 create_features line 100 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 08:55:47,892 create_features line 101 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 08:55:47,893 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 08:55:47,894 base line 34 [INFO][generate_features] skip Title
+2019-12-26 08:55:47,894 base line 34 [INFO][generate_features] skip Fare
+2019-12-26 08:55:47,895 base line 78 [INFO][check_meta] check_meta ... ok
+2019-12-26 08:56:49,323 create_features line 99 [INFO][<module>] -------------------- start
+2019-12-26 08:56:49,333 create_features line 100 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 08:56:49,344 create_features line 101 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 08:56:49,345 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 08:56:49,345 base line 34 [INFO][generate_features] skip Title
+2019-12-26 08:56:49,346 base line 34 [INFO][generate_features] skip Fare
+2019-12-26 08:56:49,346 base line 78 [INFO][check_meta] check_meta ... ok
+2019-12-26 08:56:49,349 base line 87 [DEBUG][create_memo] exists
+2019-12-26 08:56:49,352 base line 113 [INFO][create_memo] memo: age, 欠損値は、平均で埋めた
+2019-12-26 08:56:49,356 base line 114 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+0  2019-12-15 17:01:56.637306  FamilySize  n_person in family
+1  2019-12-15 17:01:56.658391       Title    敬称(Ms, Masterとか)
+2  2019-12-26 08:53:11.056104        Fare   fare, 欠損値は、平均で埋めた
+0  2019-12-26 08:56:49.346437         Age    age, 欠損値は、平均で埋めた
+2019-12-26 08:56:49,358 base line 127 [DEBUG][save] save path=../../data/feature/Age_train.pkl
+2019-12-26 08:56:49,359 base line 128 [DEBUG][save] save path=../../data/feature/Age_test.pkl
+2019-12-26 08:56:49,359 base line 129 [DEBUG][save] train feat size=(891, 1)
+2019-12-26 08:56:49,359 base line 130 [DEBUG][save] test  feat size=(418, 1)
+2019-12-26 08:56:49,361 base line 131 [DEBUG][save] 
+train 
+   Age_
+0  22.0
+1  38.0
+2  26.0
+3  35.0
+4  35.0
+2019-12-26 08:56:49,363 base line 132 [DEBUG][save] 
+test 
+   Age_
+0  34.5
+1  47.0
+2  62.0
+3  27.0
+4  22.0
+2019-12-26 08:56:49,363 base line 133 [INFO][save]  ===== finish Age =====
+2019-12-26 08:56:49,363 create_features line 103 [INFO][<module>] -------------------- end
+2019-12-26 08:59:06,525 create_features line 99 [INFO][<module>] -------------------- start
+2019-12-26 08:59:06,535 create_features line 100 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 08:59:06,547 create_features line 101 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 08:59:06,549 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 08:59:06,550 base line 34 [INFO][generate_features] skip Title
+2019-12-26 08:59:06,550 base line 78 [INFO][check_meta] check_meta ... ok
+2019-12-26 08:59:06,553 base line 87 [DEBUG][create_memo] exists
+2019-12-26 08:59:06,555 base line 113 [INFO][create_memo] memo: fare, 欠損値は、平均で埋めた
+2019-12-26 08:59:06,559 base line 114 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+0  2019-12-15 17:01:56.637306  FamilySize  n_person in family
+1  2019-12-15 17:01:56.658391       Title    敬称(Ms, Masterとか)
+2  2019-12-26 08:53:11.056104        Fare   fare, 欠損値は、平均で埋めた
+3  2019-12-26 08:56:49.346437         Age    age, 欠損値は、平均で埋めた
+0  2019-12-26 08:59:06.550123       Fare_   fare, 欠損値は、平均で埋めた
+2019-12-26 08:59:06,566 base line 127 [DEBUG][save] save path=../../data/feature/Fare__train.pkl
+2019-12-26 08:59:06,566 base line 128 [DEBUG][save] save path=../../data/feature/Fare__test.pkl
+2019-12-26 08:59:06,566 base line 129 [DEBUG][save] train feat size=(891, 1)
+2019-12-26 08:59:06,567 base line 130 [DEBUG][save] test  feat size=(418, 1)
+2019-12-26 08:59:06,571 base line 131 [DEBUG][save] 
+train 
+     Fare_
+0   7.2500
+1  71.2833
+2   7.9250
+3  53.1000
+4   8.0500
+2019-12-26 08:59:06,574 base line 132 [DEBUG][save] 
+test 
+     Fare_
+0   7.8292
+1   7.0000
+2   9.6875
+3   8.6625
+4  12.2875
+2019-12-26 08:59:06,574 base line 133 [INFO][save]  ===== finish Fare_ =====
+2019-12-26 08:59:06,574 base line 78 [INFO][check_meta] check_meta ... ok
+2019-12-26 08:59:06,576 base line 87 [DEBUG][create_memo] exists
+2019-12-26 08:59:06,579 base line 113 [INFO][create_memo] memo: age, 欠損値は、平均で埋めた
+2019-12-26 08:59:06,587 base line 114 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+0  2019-12-15 17:01:56.637306  FamilySize  n_person in family
+1  2019-12-15 17:01:56.658391       Title    敬称(Ms, Masterとか)
+2  2019-12-26 08:53:11.056104        Fare   fare, 欠損値は、平均で埋めた
+3  2019-12-26 08:56:49.346437         Age    age, 欠損値は、平均で埋めた
+4  2019-12-26 08:59:06.550123       Fare_   fare, 欠損値は、平均で埋めた
+0  2019-12-26 08:59:06.574156        Age_    age, 欠損値は、平均で埋めた
+2019-12-26 08:59:06,590 base line 127 [DEBUG][save] save path=../../data/feature/Age__train.pkl
+2019-12-26 08:59:06,590 base line 128 [DEBUG][save] save path=../../data/feature/Age__test.pkl
+2019-12-26 08:59:06,590 base line 129 [DEBUG][save] train feat size=(891, 1)
+2019-12-26 08:59:06,590 base line 130 [DEBUG][save] test  feat size=(418, 1)
+2019-12-26 08:59:06,592 base line 131 [DEBUG][save] 
+train 
+   Age_
+0  22.0
+1  38.0
+2  26.0
+3  35.0
+4  35.0
+2019-12-26 08:59:06,595 base line 132 [DEBUG][save] 
+test 
+   Age_
+0  34.5
+1  47.0
+2  62.0
+3  27.0
+4  22.0
+2019-12-26 08:59:06,595 base line 133 [INFO][save]  ===== finish Age_ =====
+2019-12-26 08:59:06,595 create_features line 103 [INFO][<module>] -------------------- end
+2019-12-26 09:06:19,544 create_features line 110 [INFO][<module>] -------------------- start
+2019-12-26 09:06:19,561 create_features line 111 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 09:06:19,577 create_features line 112 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 09:06:19,577 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 09:06:19,578 base line 34 [INFO][generate_features] skip Title
+2019-12-26 09:06:19,579 base line 34 [INFO][generate_features] skip Fare_
+2019-12-26 09:06:19,579 base line 34 [INFO][generate_features] skip Age_
+2019-12-26 09:06:19,579 create_features line 114 [INFO][<module>] -------------------- end
+2019-12-26 09:06:27,058 create_features line 110 [INFO][<module>] -------------------- start
+2019-12-26 09:06:27,069 create_features line 111 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 09:06:27,079 create_features line 112 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 09:06:27,080 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 09:06:27,081 base line 34 [INFO][generate_features] skip Title
+2019-12-26 09:06:27,081 base line 34 [INFO][generate_features] skip Fare_
+2019-12-26 09:06:27,082 base line 34 [INFO][generate_features] skip Age_
+2019-12-26 09:06:27,082 create_features line 114 [INFO][<module>] -------------------- end
+2019-12-26 09:07:35,454 create_features line 110 [INFO][<module>] -------------------- start
+2019-12-26 09:07:35,466 create_features line 111 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 09:07:35,476 create_features line 112 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 09:07:35,477 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 09:07:35,477 base line 34 [INFO][generate_features] skip Title
+2019-12-26 09:07:35,478 base line 34 [INFO][generate_features] skip Fare_
+2019-12-26 09:07:35,478 base line 34 [INFO][generate_features] skip Age_
+2019-12-26 09:07:35,478 create_features line 114 [INFO][<module>] -------------------- end
+2019-12-26 09:08:15,807 create_features line 110 [INFO][<module>] -------------------- start
+2019-12-26 09:08:15,818 create_features line 111 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 09:08:15,831 create_features line 112 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 09:08:15,832 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 09:08:15,832 base line 34 [INFO][generate_features] skip Title
+2019-12-26 09:08:15,833 base line 34 [INFO][generate_features] skip Fare_
+2019-12-26 09:08:15,833 base line 34 [INFO][generate_features] skip Age_
+2019-12-26 09:08:15,834 create_features line 114 [INFO][<module>] -------------------- end
+2019-12-26 09:10:13,076 create_features line 111 [INFO][<module>] -------------------- start
+2019-12-26 09:10:13,087 create_features line 112 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 09:10:13,100 create_features line 113 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 09:10:13,101 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 09:10:13,102 base line 34 [INFO][generate_features] skip Title
+2019-12-26 09:10:13,102 base line 34 [INFO][generate_features] skip Fare_
+2019-12-26 09:10:13,103 base line 34 [INFO][generate_features] skip Age_
+2019-12-26 09:10:13,103 create_features line 115 [INFO][<module>] -------------------- end
+2019-12-26 09:11:39,954 create_features line 110 [INFO][<module>] -------------------- start
+2019-12-26 09:11:39,966 create_features line 111 [DEBUG][<module>] 
+-train
+    PassengerId  Survived  Pclass                                               Name     Sex   Age  SibSp  Parch            Ticket     Fare Cabin Embarked
+0            1         0       3                            Braund, Mr. Owen Harris    male  22.0      1      0         A/5 21171   7.2500   NaN        S
+1            2         1       1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1      0          PC 17599  71.2833   C85        C
+2            3         1       3                             Heikkinen, Miss. Laina  female  26.0      0      0  STON/O2. 3101282   7.9250   NaN        S
+3            4         1       1       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1      0            113803  53.1000  C123        S
+4            5         0       3                           Allen, Mr. William Henry    male  35.0      0      0            373450   8.0500   NaN        S
+2019-12-26 09:11:39,977 create_features line 112 [DEBUG][<module>] 
+-test
+    PassengerId  Pclass                                          Name     Sex   Age  SibSp  Parch   Ticket     Fare Cabin Embarked
+0          892       3                              Kelly, Mr. James    male  34.5      0      0   330911   7.8292   NaN        Q
+1          893       3              Wilkes, Mrs. James (Ellen Needs)  female  47.0      1      0   363272   7.0000   NaN        S
+2          894       2                     Myles, Mr. Thomas Francis    male  62.0      0      0   240276   9.6875   NaN        Q
+3          895       3                              Wirz, Mr. Albert    male  27.0      0      0   315154   8.6625   NaN        S
+4          896       3  Hirvonen, Mrs. Alexander (Helga E Lindqvist)  female  22.0      1      1  3101298  12.2875   NaN        S
+2019-12-26 09:11:39,978 base line 34 [INFO][generate_features] skip FamilySize
+2019-12-26 09:11:39,979 base line 34 [INFO][generate_features] skip Title
+2019-12-26 09:11:39,980 base line 34 [INFO][generate_features] skip Fare_
+2019-12-26 09:11:39,980 base line 34 [INFO][generate_features] skip Age_
+2019-12-26 09:11:39,981 base line 78 [INFO][check_meta] check_meta ... ok
+2019-12-26 09:11:39,987 base line 87 [DEBUG][create_memo] exists
+2019-12-26 09:11:39,989 base line 113 [INFO][create_memo] memo: sex
+2019-12-26 09:11:39,993 base line 114 [DEBUG][create_memo] _memo.csv:                          date   feat_name                memo
+0  2019-12-15 17:01:56.637306  FamilySize  n_person in family
+1  2019-12-15 17:01:56.658391       Title    敬称(Ms, Masterとか)
+2  2019-12-26 08:53:11.056104        Fare   fare, 欠損値は、平均で埋めた
+3  2019-12-26 08:56:49.346437         Age    age, 欠損値は、平均で埋めた
+4  2019-12-26 08:59:06.550123       Fare_   fare, 欠損値は、平均で埋めた
+5  2019-12-26 08:59:06.574156        Age_    age, 欠損値は、平均で埋めた
+0  2019-12-26 09:11:39.980679        Sex_                 sex
+2019-12-26 09:11:39,996 base line 127 [DEBUG][save] save path=../../data/feature/Sex__train.pkl
+2019-12-26 09:11:39,996 base line 128 [DEBUG][save] save path=../../data/feature/Sex__test.pkl
+2019-12-26 09:11:39,996 base line 129 [DEBUG][save] train feat size=(891, 1)
+2019-12-26 09:11:39,996 base line 130 [DEBUG][save] test  feat size=(418, 1)
+2019-12-26 09:11:39,999 base line 131 [DEBUG][save] 
+train 
+   Sex_
+0     1
+1     0
+2     0
+3     0
+4     1
+2019-12-26 09:11:40,001 base line 132 [DEBUG][save] 
+test 
+   Sex_
+0     1
+1     0
+2     1
+3     1
+4     0
+2019-12-26 09:11:40,001 base line 133 [INFO][save]  ===== finish Sex_ =====
+2019-12-26 09:11:40,002 create_features line 114 [INFO][<module>] -------------------- end

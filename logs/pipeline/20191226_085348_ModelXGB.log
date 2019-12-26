@@ -1,0 +1,5 @@
+2019-12-26 08:53:48,135 run line55 [INFO][run] ********************************************************
+2019-12-26 08:53:48,136 run line56 [INFO][run] ******************** start pipeline ********************
+2019-12-26 08:53:48,136 run line57 [INFO][run] ********************************************************
+2019-12-26 08:53:48,136 runner line84 [INFO][run_train_cv] 20191226_085348_ModelXGB - start training cv
+2019-12-26 08:53:48,136 runner line93 [INFO][run_train_cv] 20191226_085348_ModelXGB fold 0 - start training

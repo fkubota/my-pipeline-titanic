@@ -2,13 +2,18 @@ import sys
 import numpy as np
 import pandas as pd
 import logging
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+import seaborn as sns
 from model import Model
 from result import ResultHandler
 from sklearn.metrics import log_loss
 from sklearn.model_selection import StratifiedKFold
 from typing import Callable, List, Tuple, Union
+from analysys import permutation_importance
 sys.path.append('../utils')
 from util import Util
+mpl.rcParams['axes.facecolor'] = 'ffffff'
 
 
 # logger
@@ -37,6 +42,7 @@ class Runner:
         self.n_fold = n_fold
         self.result_handler = result_handler
         self.run_name = self.result_handler.name
+        self.pi_results = []
 
         # save_params
         self.save_run_params()
@@ -64,6 +70,11 @@ class Runner:
         # バリデーションデータへの予測・評価を行う
         va_pred = model.predict(va_x)
         score = log_loss(va_y, va_pred, eps=1e-15, normalize=True)
+
+        # permutation importance
+        pi = permutation_importance(model, log_loss)
+        pi.compute(va_x, va_y)
+        self.pi_results.append(pi.df_result)
 
         # モデル、インデックス、予測値、評価を返す
         return model, va_idx, va_pred, score
@@ -101,6 +112,14 @@ class Runner:
         preds = np.concatenate(preds, axis=0)
         preds = preds[order]
 
+        # permmutation_importance をまとめる
+        df_concat = pd.concat(self.pi_results)
+        n_feat = len(df_concat.feat.unique())
+        plt.figure(figsize=(10, int(1*n_feat)), dpi=100)
+        sns.barplot(x="score_diff", y='feat',
+                    data=df_concat.sort_values(by='score_diff', ascending=True))
+        plt.savefig('permutation_importance.png')
+
         logger.info(f'{self.run_name} - end training cv'
                     f' - oof score mean:{np.mean(scores):.4f}, '
                     f'std:{np.std(scores):.4f}')
@@ -129,7 +148,7 @@ class Runner:
             pred = model.predict(test_x)
             preds.append(pred)
             logger.info(f'{self.run_name}'
-                        f'- end prediction fold:{i_fold}/{self.n_fold-1}')
+                        f' - end prediction fold:{i_fold}/{self.n_fold-1}')
 
         # 予測の平均値を出力する
         pred_avg = np.mean(preds, axis=0)

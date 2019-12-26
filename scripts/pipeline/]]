@@ -80,7 +80,8 @@ class Age_(Feature):
 
 
 class Sex_(Feature):
-    def create_features(self):
+    def create_feature(self):
+        print('hello')
         self.feat_train['Sex_'] = train['Sex'].apply(lambda x: 1 if x == 'male' else 0)
         self.feat_test['Sex_'] = test['Sex'].apply(lambda x: 1 if x == 'male' else 0)
 

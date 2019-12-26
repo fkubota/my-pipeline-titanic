@@ -70,14 +70,14 @@ if __name__ == '__main__':
     n_fold = 4
 
     # 特徴量の指定
-    feat_grps = ['FamilySize']
+    feat_grps = ['FamilySize', 'Age_', 'Fare_', 'Sex_']
 
     # xgb pram
     params_xgb = {
         'objective': 'binary:logistic',
         'eval_metric': 'logloss',
         'num_class': 1,
-        'max_depth': [100, 200, 300],
+        'max_depth': 100,
         'eta': 0.01,
         'min_child_weight': 10,
         'subsample': 0.9,
@@ -86,7 +86,7 @@ if __name__ == '__main__':
         'random_state': 71,
         'verbosity': 2,
         'verbose': 10,
-        'num_round': 1000,
+        'num_round': 100,
         'early_stopping_rounds': 100,
     }
 

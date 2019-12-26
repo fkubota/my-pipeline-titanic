@@ -1,0 +1,16 @@
+2019-12-26 08:38:34,772 run line55 [INFO][run] ********************************************************
+2019-12-26 08:38:34,772 run line56 [INFO][run] ******************** start pipeline ********************
+2019-12-26 08:38:34,772 run line57 [INFO][run] ********************************************************
+2019-12-26 08:38:34,773 runner line84 [INFO][run_train_cv] 20191226_083834_ModelXGB - start training cv
+2019-12-26 08:38:34,773 runner line93 [INFO][run_train_cv] 20191226_083834_ModelXGB fold 0 - start training
+2019-12-26 08:38:35,023 runner line95 [INFO][run_train_cv] 20191226_083834_ModelXGB fold 0 - end training - score 0.6435
+2019-12-26 08:38:35,023 runner line100 [DEBUG][run_train_cv] save model 0
+2019-12-26 08:38:35,023 runner line93 [INFO][run_train_cv] 20191226_083834_ModelXGB fold 1 - start training
+2019-12-26 08:38:35,201 runner line95 [INFO][run_train_cv] 20191226_083834_ModelXGB fold 1 - end training - score 0.6611
+2019-12-26 08:38:35,201 runner line100 [DEBUG][run_train_cv] save model 1
+2019-12-26 08:38:35,201 runner line93 [INFO][run_train_cv] 20191226_083834_ModelXGB fold 2 - start training
+2019-12-26 08:38:35,374 runner line95 [INFO][run_train_cv] 20191226_083834_ModelXGB fold 2 - end training - score 0.6192
+2019-12-26 08:38:35,374 runner line100 [DEBUG][run_train_cv] save model 2
+2019-12-26 08:38:35,374 runner line93 [INFO][run_train_cv] 20191226_083834_ModelXGB fold 3 - start training
+2019-12-26 08:38:35,550 runner line95 [INFO][run_train_cv] 20191226_083834_ModelXGB fold 3 - end training - score 0.6450
+2019-12-26 08:38:35,550 runner line100 [DEBUG][run_train_cv] save model 3
