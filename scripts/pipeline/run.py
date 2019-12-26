@@ -87,11 +87,7 @@ if __name__ == '__main__':
         'random_state': 71,
         'verbosity': 2,
         'verbose': 10,
-<<<<<<< HEAD
-        'num_round': 100,
-=======
         'num_round': 10,
->>>>>>> 4f8910777636306511d40ee99ad61d1c485d5698
         'early_stopping_rounds': 100,
     }
 

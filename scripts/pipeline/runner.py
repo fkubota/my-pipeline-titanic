@@ -117,7 +117,8 @@ class Runner:
         n_feat = len(df_concat.feat.unique())
         plt.figure(figsize=(10, int(1*n_feat)), dpi=100)
         sns.barplot(x="score_diff", y='feat',
-                    data=df_concat.sort_values(by='score_diff', ascending=True))
+                    data=df_concat.sort_values(by='score_diff',
+                                               ascending=True))
         plt.savefig('permutation_importance.png')
 
         logger.info(f'{self.run_name} - end training cv'
