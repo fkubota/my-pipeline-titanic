@@ -1,0 +1,38 @@
+2019-12-27 08:39:52,267 run line58 [INFO][run] ********************************************************
+2019-12-27 08:39:52,267 run line59 [INFO][run] ******************** start pipeline ********************
+2019-12-27 08:39:52,267 run line60 [INFO][run] ********************************************************
+2019-12-27 08:39:52,269 runner line88 [INFO][run_train_cv] 20191227_083952_ModelLGBM - start training cv
+2019-12-27 08:39:52,270 runner line97 [INFO][run_train_cv] 20191227_083952_ModelLGBM fold 0 - start training
+2019-12-27 08:39:52,400 runner line74 [INFO][train_fold] 
+               precision    recall  f1-score   support
+
+           0       0.82      0.89      0.85       275
+           1       0.79      0.69      0.74       171
+
+   micro avg       0.81      0.81      0.81       446
+   macro avg       0.81      0.79      0.80       446
+weighted avg       0.81      0.81      0.81       446
+
+2019-12-27 08:39:52,444 runner line99 [INFO][run_train_cv] 20191227_083952_ModelLGBM fold 0 - end training - valid-score 6.5051
+2019-12-27 08:39:52,448 runner line104 [DEBUG][run_train_cv] save model 0
+2019-12-27 08:39:52,448 runner line97 [INFO][run_train_cv] 20191227_083952_ModelLGBM fold 1 - start training
+2019-12-27 08:39:52,530 runner line74 [INFO][train_fold] 
+               precision    recall  f1-score   support
+
+           0       0.82      0.87      0.84       274
+           1       0.77      0.68      0.72       171
+
+   micro avg       0.80      0.80      0.80       445
+   macro avg       0.79      0.78      0.78       445
+weighted avg       0.80      0.80      0.80       445
+
+2019-12-27 08:39:52,572 runner line99 [INFO][run_train_cv] 20191227_083952_ModelLGBM fold 1 - end training - valid-score 6.9078
+2019-12-27 08:39:52,577 runner line104 [DEBUG][run_train_cv] save model 1
+2019-12-27 08:39:52,996 runner line127 [INFO][run_train_cv] 20191227_083952_ModelLGBM - end training cv - oof score mean:6.7065, std:0.2014
+2019-12-27 08:39:53,006 runner line141 [INFO][run_predict_cv] 20191227_083952_ModelLGBM - start prediction cv
+2019-12-27 08:39:53,013 runner line154 [INFO][run_predict_cv] 20191227_083952_ModelLGBM - end prediction fold:0/1
+2019-12-27 08:39:53,018 runner line154 [INFO][run_predict_cv] 20191227_083952_ModelLGBM - end prediction fold:1/1
+2019-12-27 08:39:53,021 runner line163 [INFO][run_predict_cv] 20191227_083952_ModelLGBM - end prediction cv
+2019-12-27 08:39:53,022 run line64 [INFO][run] ********************************************************
+2019-12-27 08:39:53,022 run line65 [INFO][run] ********************* end pipeline *********************
+2019-12-27 08:39:53,022 run line66 [INFO][run] ********************************************************

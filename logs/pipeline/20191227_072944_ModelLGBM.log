@@ -1,0 +1,5 @@
+2019-12-27 07:29:44,002 run line56 [INFO][run] ********************************************************
+2019-12-27 07:29:44,002 run line57 [INFO][run] ******************** start pipeline ********************
+2019-12-27 07:29:44,003 run line58 [INFO][run] ********************************************************
+2019-12-27 07:29:44,003 runner line86 [INFO][run_train_cv] 20191227_072944_ModelLGBM - start training cv
+2019-12-27 07:29:44,003 runner line95 [INFO][run_train_cv] 20191227_072944_ModelLGBM fold 0 - start training

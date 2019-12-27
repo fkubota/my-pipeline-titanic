@@ -68,7 +68,7 @@ class Util:
     @classmethod
     def save_params(cls, data, save_dir):
         name = save_dir.split('/')[-1]
-        path = f'{save_dir}/{name}.json'
+        path = f'{save_dir}/{name}_params.json'
         os.makedirs(os.path.dirname(path), exist_ok=True)
         file_ = open(path, 'w')
         json.dump(data, file_, indent=4)

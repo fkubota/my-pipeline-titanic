@@ -7,7 +7,7 @@ import matplotlib as mpl
 import seaborn as sns
 from model import Model
 from result import ResultHandler
-from sklearn.metrics import log_loss
+from sklearn.metrics import f1_score
 from sklearn.model_selection import StratifiedKFold
 from typing import Callable, List, Tuple, Union
 from analysys import permutation_importance
@@ -69,10 +69,11 @@ class Runner:
 
         # バリデーションデータへの予測・評価を行う
         va_pred = model.predict(va_x)
-        score = log_loss(va_y, va_pred, eps=1e-15, normalize=True)
+        # score = log_loss(va_y, va_pred, eps=1e-15, normalize=True)
+        score = f1_score(va_y, va_pred)
 
         # permutation importance
-        pi = permutation_importance(model, log_loss)
+        pi = permutation_importance(model, f1_score)
         pi.compute(va_x, va_y)
         self.pi_results.append(pi.df_result)
 
@@ -95,7 +96,7 @@ class Runner:
             logger.info(f'{self.run_name} fold {i_fold} - start training')
             model, va_idx, va_pred, score = self.train_fold(i_fold)
             logger.info(f'{self.run_name} fold {i_fold}'
-                        f' - end training - score {score:.4f}')
+                        f' - end training - valid-score {score:.4f}')
 
             # モデルを保存する
             model.save_model(self.result_handler.result_dir)
@@ -119,7 +120,8 @@ class Runner:
         sns.barplot(x="score_diff", y='feat',
                     data=df_concat.sort_values(by='score_diff',
                                                ascending=True))
-        plt.savefig('permutation_importance.png')
+        result_dir = self.result_handler.result_dir
+        plt.savefig(f'{result_dir}/permutation_importance.png')
 
         logger.info(f'{self.run_name} - end training cv'
                     f' - oof score mean:{np.mean(scores):.4f}, '

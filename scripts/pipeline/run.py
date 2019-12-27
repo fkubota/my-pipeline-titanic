@@ -1,5 +1,6 @@
 import sys
-from model_xgb import ModelXGB
+import warnings
+from model_lgbm import ModelLGBM
 from runner import Runner
 import logging
 from result import ResultHandler
@@ -7,6 +8,7 @@ from result import ResultHandler
 sys.path.append('../utils')
 from util import Util
 from CONST import LOG_DIR
+warnings.filterwarnings('ignore')
 
 
 def preparation_logger(log_name):
@@ -73,33 +75,32 @@ if __name__ == '__main__':
     # 特徴量の指定
     feat_grps = ['FamilySize', 'Age_', 'Fare_', 'Sex_']
 
-    # xgb pram
-    params_xgb = {
-        'objective': 'binary:logistic',
-        'eval_metric': 'logloss',
-        'num_class': 1,
-        'max_depth': 100,
-        'eta': 0.01,
-        'min_child_weight': 10,
-        'subsample': 0.9,
-        'colsample_bytree': 0.8,
-        # 'silent': 1,
-        'random_state': 71,
-        'verbosity': 2,
-        'verbose': 10,
-        'num_round': 10,
-        'early_stopping_rounds': 100,
-    }
+    # model_params
+    model_params = {
+     'n_estimators': 200,
+     'boosting_type': 'gbdt',
+     'max_depth': 5,
+     'objective': 'binary',
+     'num_leaves': 20,
+     'learning_rate': 0.05,
+     'max_bin': 512,
+     'subsample_freq': 1,
+     'colsample_bytree': 0.8,
+     'reg_alpha': 5,
+     'reg_lambda': 10,
+     'min_child_weight': 1,
+     'min_child_samples': 5,
+     'metric': 'binary_logloss'
+     }
 
     # ==============================================================
 
     # parse_params
-    dict_params = params_xgb
-    model = ModelXGB
+    dict_params = model_params
+    model = ModelLGBM
     dict_params_list = Util.parse_dict_param(dict_params)
     for params in dict_params_list:
         run(model=model,
             n_fold=n_fold,
             feat_grps=feat_grps,
             model_params=params)
-    # Submission.create_submission('xgb1')

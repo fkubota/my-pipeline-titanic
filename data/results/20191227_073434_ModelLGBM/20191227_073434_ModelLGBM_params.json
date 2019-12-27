@@ -1,0 +1,10 @@
+{
+    "n_fold": 2,
+    "feat_grps": [
+        "FamilySize",
+        "Age_",
+        "Fare_",
+        "Sex_"
+    ],
+    "model_params": {}
+}
