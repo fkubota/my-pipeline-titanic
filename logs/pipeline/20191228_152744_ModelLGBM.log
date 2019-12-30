@@ -1,0 +1,18 @@
+2019-12-28 15:27:44,517 run line56 [INFO][run] ********************************************************
+2019-12-28 15:27:44,518 run line57 [INFO][run] ******************** start pipeline ********************
+2019-12-28 15:27:44,518 run line58 [INFO][run] ********************************************************
+2019-12-28 15:27:44,518 runner line87 [INFO][run_train_cv] 20191228_152744_ModelLGBM - start training cv
+2019-12-28 15:27:44,518 runner line96 [INFO][run_train_cv] 20191228_152744_ModelLGBM fold 0 - start training
+2019-12-28 15:27:44,643 runner line98 [INFO][run_train_cv] 20191228_152744_ModelLGBM fold 0 - end training - valid-score 0.7375
+2019-12-28 15:27:44,646 runner line103 [DEBUG][run_train_cv] save model 0
+2019-12-28 15:27:44,646 runner line96 [INFO][run_train_cv] 20191228_152744_ModelLGBM fold 1 - start training
+2019-12-28 15:27:44,757 runner line98 [INFO][run_train_cv] 20191228_152744_ModelLGBM fold 1 - end training - valid-score 0.7245
+2019-12-28 15:27:44,761 runner line103 [DEBUG][run_train_cv] save model 1
+2019-12-28 15:27:45,175 runner line126 [INFO][run_train_cv] 20191228_152744_ModelLGBM - end training cv - oof score mean:0.7310, std:0.0065
+2019-12-28 15:27:45,185 runner line140 [INFO][run_predict_cv] 20191228_152744_ModelLGBM - start prediction cv
+2019-12-28 15:27:45,191 runner line153 [INFO][run_predict_cv] 20191228_152744_ModelLGBM - end prediction fold:0/1
+2019-12-28 15:27:45,196 runner line153 [INFO][run_predict_cv] 20191228_152744_ModelLGBM - end prediction fold:1/1
+2019-12-28 15:27:45,200 runner line162 [INFO][run_predict_cv] 20191228_152744_ModelLGBM - end prediction cv
+2019-12-28 15:27:45,200 run line62 [INFO][run] ********************************************************
+2019-12-28 15:27:45,200 run line63 [INFO][run] ********************* end pipeline *********************
+2019-12-28 15:27:45,200 run line64 [INFO][run] ********************************************************

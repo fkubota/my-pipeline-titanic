@@ -4,7 +4,6 @@ from model_lgbm import ModelLGBM
 from runner import Runner
 import logging
 from result import ResultHandler
-# from util import Submission
 sys.path.append('../utils')
 from util import Util
 from CONST import LOG_DIR
@@ -53,7 +52,6 @@ def preparation_logger(log_name):
 
 def run(model, n_fold, feat_grps, model_params):
     rh = ResultHandler(model.__name__)
-    print('==============', rh.name, '=======================================')
     logger, sh = preparation_logger(rh.name)
     logger.info('********************************************************')
     logger.info('******************** start pipeline ********************')
@@ -77,7 +75,10 @@ if __name__ == '__main__':
 
     # model_params
     model_params = {
+     'early_stopping_rounds': 100,
+     'verbose': 20,
      'n_estimators': 200,
+     'random_state': 0,
      'boosting_type': 'gbdt',
      'max_depth': 5,
      'objective': 'binary',

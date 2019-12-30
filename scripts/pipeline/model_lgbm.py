@@ -11,12 +11,19 @@ class ModelLGBM(Model):
         # set params
         params = dict(self.params)
 
+        # parse params
+        early_stopping_rounds = params['early_stopping_rounds']
+        verbose = params['verbose']
+        params.pop('early_stopping_rounds')
+        params.pop('verbose')
+
+
         # 学習
         self.model = lgb.LGBMClassifier(**params)
         self.model.fit(tr_x, tr_y,
                        eval_set=[(tr_x, tr_y), (va_x, va_y)],
-                       early_stopping_rounds=100,
-                       verbose=20)
+                       early_stopping_rounds=early_stopping_rounds,
+                       verbose=verbose)
 
     def predict(self, te_x):
         return self.model.predict(te_x,
